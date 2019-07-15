@@ -431,7 +431,8 @@
       
         
           <hr>
-<p>[TOC]<br>
+<h1 id="1006-换个格式输出整数"><a href="#1006-换个格式输出整数" class="headerlink" title="1006 换个格式输出整数"></a><font size="5" color="Orange">1006 换个格式输出整数</font></h1><p>首先判断输入数字的位数，然后分情况输出即可。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">int</span> signB,  signS;</span><br><span class="line">    signB = signS = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (n &gt;= <span class="number">100</span>)</span><br><span class="line">        signB = signS = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (n &gt;= <span class="number">10</span>)</span><br><span class="line">        signS = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (signB) &#123;</span><br><span class="line">        <span class="keyword">int</span> count = n / <span class="number">100</span>;</span><br><span class="line">        <span class="keyword">while</span> (count--&gt;<span class="number">0</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"B"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (signS) &#123;</span><br><span class="line">        <span class="keyword">int</span> count = (n / <span class="number">10</span>) % <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">while</span> (count--&gt;<span class="number">0</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"S"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n % <span class="number">10</span>; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>, i);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/07/15/PAT乙级题解1006-1010/#more" rel="contents">
@@ -441,7 +442,7 @@
           <!--/noindex-->
         
       
-    </p></div>
+    </div>
     
     
     
@@ -599,7 +600,8 @@
 
       
         
-          <p>[TOC]<br>
+          <h1 id="1001-害死人不偿命的-3n-1-猜想"><a href="#1001-害死人不偿命的-3n-1-猜想" class="headerlink" title="1001 害死人不偿命的(3n+1)猜想"></a><font size="5" color="Orange">1001 害死人不偿命的(3n+1)猜想</font></h1><p>将奇数情况转换为偶数，最后只对偶数做除二处理。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, count = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    <span class="keyword">while</span> (n !=<span class="number">1</span> )&#123;</span><br><span class="line">        count++;</span><br><span class="line">        <span class="keyword">if</span> (n &amp; <span class="number">1</span>) </span><br><span class="line">            n = <span class="number">3</span> * n + <span class="number">1</span>;</span><br><span class="line">        n /= <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,count);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/07/15/PAT乙级题解1001-1005/#more" rel="contents">
@@ -609,7 +611,7 @@
           <!--/noindex-->
         
       
-    </p></div>
+    </div>
     
     
     
