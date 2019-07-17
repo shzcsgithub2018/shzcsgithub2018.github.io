@@ -141,10 +141,9 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190123131000212.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190123133406380.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190123142044661.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190123143238253.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190123144607489.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190123151125262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-07-17T14:58:57.207Z">
+<meta property="og:updated_time" content="2019-07-17T15:09:36.306Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="权限管理命令">
 <meta name="twitter:description" content="权限介绍 为什么需要权限平时所使用的计算机都是个人计算机，都是自己或者自己信任的人在使用，所以感受不到权限的作用，都是使用管理员权限。可是，对于服务器来说，使用者非常多，服务器里保存的数据有些非常重要，有些价值非常高，因此对权限当然是设定的越详细越好，用户的分级越明确越好。比如在银行里，行长和柜台服务人员对于存储数据的服务器的权限肯定不同。在服务器上，绝对不是所有的用户都是用 root 身份登录，">
@@ -569,11 +568,10 @@
 <td>=</td>
 <td>设置权限</td>
 </tr>
-<tr>
-<td>- 权限</td>
-<td></td>
-</tr>
 </tbody></table>
+<ul>
+<li>权限</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -594,8 +592,28 @@
 <td>执行权限</td>
 </tr>
 </tbody></table>
-<p>权限还可以用数字表示：<br> 符号|对应数字<br>—|—<br>r|4<br>w|2<br>x|1</p>
-<p>比如 755权限：<br>7=4+2+1 代表所有者有rwx权限<br>5=4+1     代表所属组有r-x权限<br>5=4+1     代表其他人有r-x权限</p>
+<p>权限还可以用数字表示：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>对应数字</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>r</td>
+<td>4</td>
+</tr>
+<tr>
+<td>w</td>
+<td>2</td>
+</tr>
+<tr>
+<td>x</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>比如 755权限：<br>7=4+2+1     代表所有者有rwx权限<br>5=4+1       代表所属组有r-x权限<br>5=4+1       代表其他人有r-x权限</p>
 <h2 id="常用用法"><a href="#常用用法" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
 <li>用 “-“ 去掉权限<br><img src="https://img-blog.csdnimg.cn/20190119172921501.png" alt="在这里插入图片描述"></li>
 <li>用 “+” 给多个用户添加权限<br><img src="https://img-blog.csdnimg.cn/20190119173221409.png" alt="在这里插入图片描述"></li>
@@ -685,9 +703,9 @@
 <li>修改改变文件的所属组<br><img src="https://img-blog.csdnimg.cn/20190123133406380.png" alt="在这里插入图片描述"></li>
 </ol>
 <h1 id="umask-默认权限"><a href="#umask-默认权限" class="headerlink" title="umask 默认权限"></a>umask 默认权限</h1><ol>
-<li>umask 权限的作用<br>umask 权限是 Linux 权限的一种。在 Linux 中，所有的文件和目录都要有基本的权限，新建的文件和目录当然也要有默认的权限。<br>在 Linux 中，通过 uamsk 默认权限来给所有新建立的文件和目录赋予初始权限，这一点和 Window 不一样，Windows 是通过继承上级目录的权限来给文件和目录赋予初始权限的。<br>查看系统的 umask 权限：<br><img src="https://img-blog.csdnimg.cn/20190123142044661.png" alt="在这里插入图片描述"><br>数值的 umask 权限，我们看到是： 0002 ，其中第一个 0 代表文件的特殊权限，暂时不谈；后 3 为数字 002 才是真正的 umask 默认权限。</li>
-<li>umask 计算方法<br>Linux 中，对于新建文件和目录有默认的最大权限：<br>(1) 对文件来说，新建文件的默认最大权限是 666，没有执行权限。)<br>(2) 对于目录来讲，新建目录的最大权限是 777。<br>umask 计算方法很多，这里列举一个比较简单的，将 uamsk 换算成字母，文件和目录的权限也换算成字母(分别为 rw-rw-rw- 和 rwxrwxrwx )，减去对应字母即可。</li>
-</ol>
+<li><p>umask 权限的作用<br>umask 权限是 Linux 权限的一种。在 Linux 中，所有的文件和目录都要有基本的权限，新建的文件和目录当然也要有默认的权限。<br>在 Linux 中，通过 uamsk 默认权限来给所有新建立的文件和目录赋予初始权限，这一点和 Window 不一样，Windows 是通过继承上级目录的权限来给文件和目录赋予初始权限的。<br>查看系统的 umask 权限：<br><img src="https://img-blog.csdnimg.cn/20190123142044661.png" alt="在这里插入图片描述"><br>数值的 umask 权限，我们看到是： 0002 ，其中第一个 0 代表文件的特殊权限，暂时不谈；后 3 为数字 002 才是真正的 umask 默认权限。</p>
+</li>
+<li><p>umask 计算方法<br>Linux 中，对于新建文件和目录有默认的最大权限：<br>(1) 对文件来说，新建文件的默认最大权限是 666，没有执行权限。)<br>(2) 对于目录来讲，新建目录的最大权限是 777。<br>umask 计算方法很多，这里列举一个比较简单的，将 uamsk 换算成字母，文件和目录的权限也换算成字母(分别为 rw-rw-rw- 和 rwxrwxrwx )，减去对应字母即可。</p>
 <table>
 <thead>
 <tr>
@@ -711,15 +729,10 @@
 <td>r w - r - - r - -</td>
 <td>r w x r - - r - -</td>
 </tr>
-<tr>
-<td>注意：不是数字相减</td>
-<td></td>
-<td></td>
-</tr>
 </tbody></table>
-<p>测试结果如下：<br><img src="https://img-blog.csdnimg.cn/20190123143238253.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ol start="3">
-<li>umask 默认权限的修改方法<br>（1）临时修改 umask 默认权限，重启或重新登录就会失效(开新的终端也不同)<br><img src="https://img-blog.csdnimg.cn/20190123144607489.png" alt="在这里插入图片描述"><br>（2）永久修改 umask 默认权限<br>对于当前用户，在~/.bashrc 中 添加 umask 044 ，重新登录即可更改。<br>对于所有用户，可以参照如下结果：<br><img src="https://img-blog.csdnimg.cn/20190123151125262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</li>
+<li><p>umask 默认权限的修改方法<br>（1）临时修改 umask 默认权限，重启或重新登录就会失效(开新的终端也不同)<br><img src="https://img-blog.csdnimg.cn/20190123144607489.png" alt><br>（2）永久修改 umask 默认权限<br>对于当前用户，在~/.bashrc 中 添加 umask 044 ，重新登录即可更改。<br>对于所有用户，可以参照如下结果：<br><img src="https://img-blog.csdnimg.cn/20190123151125262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</li>
 </ol>
 
       

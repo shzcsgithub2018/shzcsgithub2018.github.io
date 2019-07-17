@@ -143,7 +143,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190124164526761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190124164656793.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190124164747408.png">
-<meta property="og:updated_time" content="2019-07-17T14:17:41.578Z">
+<meta property="og:updated_time" content="2019-07-17T15:19:27.894Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="压缩解压命令">
 <meta name="twitter:description" content="在系统中，如果有大量的文件需要复制和保存，那么把他们打成压缩包是不错的选择。打包压缩作为常规操作，在 Windows 和 Linux 中都比较常见。Windows 中常见的压缩包格式主要有 “.zip” “.rar”  “.7z” 等；Linux 中常见的压缩格式有十几种，比如 “.zip” “.gz” “.bz2” “.tar” “.tar.gz” “.tar.bz2” 等。">
@@ -432,7 +432,7 @@
       
         <p> 在系统中，如果有大量的文件需要复制和保存，那么把他们打成压缩包是不错的选择。打包压缩作为常规操作，在 Windows 和 Linux 中都比较常见。Windows 中常见的压缩包格式主要有 “.zip” “.rar”  “.7z” 等；Linux 中常见的压缩格式有十几种，比如 “.zip” “.gz” “.bz2” “.tar” “.tar.gz” “.tar.bz2” 等。</p>
  <a id="more"></a>
-<h1 id="ZIP-格式"><a href="#ZIP-格式" class="headerlink" title=".ZIP 格式"></a>.ZIP 格式</h1><h2 id="压缩命令-zip"><a href="#压缩命令-zip" class="headerlink" title="压缩命令 zip"></a>压缩命令 zip</h2><table>
+<h1 id="ZIP-格式"><a href="#ZIP-格式" class="headerlink" title="ZIP 格式"></a>ZIP 格式</h1><h2 id="压缩命令-zip"><a href="#压缩命令-zip" class="headerlink" title="压缩命令 zip"></a>压缩命令 zip</h2><table>
 <thead>
 <tr>
 <th>项目</th>
@@ -498,7 +498,7 @@
 <h3 id="常用用法-1"><a href="#常用用法-1" class="headerlink" title="常用用法"></a>常用用法</h3><ul>
 <li>解压缩到指定位置<br><img src="https://img-blog.csdnimg.cn/20190124143934901.png" alt="在这里插入图片描述"></li>
 </ul>
-<h1 id="gz-格式"><a href="#gz-格式" class="headerlink" title=".gz 格式"></a>.gz 格式</h1><p>Linux 中最常用的压缩格式</p>
+<h1 id="gz-格式"><a href="#gz-格式" class="headerlink" title="gz 格式"></a>gz 格式</h1><p>Linux 中最常用的压缩格式</p>
 <h2 id="压缩命令-gzip"><a href="#压缩命令-gzip" class="headerlink" title="压缩命令 gzip"></a>压缩命令 gzip</h2><table>
 <thead>
 <tr>
@@ -565,7 +565,7 @@
 <h3 id="命令格式-3"><a href="#命令格式-3" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gunzip [选项] 文件或目录</span><br><span class="line">选项：</span><br><span class="line">	-r：	解压缩目录</span><br></pre></td></tr></table></figure>
 
 <p>该命令与 gzip -d 作用相同。<br>且这个命令只能解压缩，不能解打包。</p>
-<h1 id="bz2-格式"><a href="#bz2-格式" class="headerlink" title=".bz2 格式"></a>.bz2 格式</h1><p>这是 Linux 中的另一种压缩格式，从理论上讲，改格式算法更先进、压缩比更好；而 “.gz” 格式相对来说压缩时间更短。</p>
+<h1 id="bz2-格式"><a href="#bz2-格式" class="headerlink" title="bz2 格式"></a>bz2 格式</h1><p>这是 Linux 中的另一种压缩格式，从理论上讲，改格式算法更先进、压缩比更好；而 “.gz” 格式相对来说压缩时间更短。</p>
 <h2 id="压缩命令-bzip2"><a href="#压缩命令-bzip2" class="headerlink" title="压缩命令 bzip2"></a>压缩命令 bzip2</h2><table>
 <thead>
 <tr>
@@ -627,18 +627,46 @@
 </tbody></table>
 <h3 id="命令格式-5"><a href="#命令格式-5" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bunzip [选项] 源文件</span><br><span class="line">选项：</span><br><span class="line">	-k：	解压缩时，保留源文件</span><br></pre></td></tr></table></figure>
 
-<h1 id="tar-格式"><a href="#tar-格式" class="headerlink" title=".tar 格式"></a>.tar 格式</h1><p>写到这里，我们发现不论是 gzip 命令还是 bzip2 ，前者只能单独压缩目录下的子文件，后者不支持目录的压缩。<br>Linux 中，对打包和压缩是区别对待的。也就是说，在 Linux 中，如果想把多个文件或目录打包到一个文件包中则使用的是 tar 命令；而压缩才使用 gzip 或 bzip2命令。<br><strong>.tar 格式的打包和解打包都是用 tar 命令，区别只是选项不同。</strong><br>  项目 |   内容<br>   —–|—<br>   命令名称|tar<br>英文原意|tar<br>所在路径|/bin/tar<br>执行权限|所有用户<br>作用|打包与解打包命令</p>
-<h3 id="命令格式-6"><a href="#命令格式-6" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tar [选项] [-f 压缩包名] 源文件或目录</span><br><span class="line">选项：</span><br><span class="line">	-c:		打包</span><br><span class="line">	-x:		解打包</span><br><span class="line">	-f：	指定压缩包文件名</span><br><span class="line">	-t:		测试，就是不解打包，只是查看包中有哪些文件</span><br><span class="line">	-v:		显示打包文件过程</span><br><span class="line">	-C:		指定解打包位置</span><br></pre></td></tr></table></figure>
+<h1 id="tar-格式"><a href="#tar-格式" class="headerlink" title="tar 格式"></a>tar 格式</h1><p>写到这里，我们发现不论是 gzip 命令还是 bzip2 ，前者只能单独压缩目录下的子文件，后者不支持目录的压缩。<br>Linux 中，对打包和压缩是区别对待的。也就是说，在 Linux 中，如果想把多个文件或目录打包到一个文件包中则使用的是 tar 命令；而压缩才使用 gzip 或 bzip2命令。<br><strong>.tar 格式的打包和解打包都是用 tar 命令，区别只是选项不同。</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令名称</td>
+<td>tar</td>
+</tr>
+<tr>
+<td>英文原意</td>
+<td>tar</td>
+</tr>
+<tr>
+<td>所在路径</td>
+<td>/bin/tar</td>
+</tr>
+<tr>
+<td>执行权限</td>
+<td>所有用户</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>打包与解打包命令</td>
+</tr>
+</tbody></table>
+<h2 id="命令格式-6"><a href="#命令格式-6" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tar [选项] [-f 压缩包名] 源文件或目录</span><br><span class="line">选项：</span><br><span class="line">	-c:		打包</span><br><span class="line">	-x:		解打包</span><br><span class="line">	-f：	指定压缩包文件名</span><br><span class="line">	-t:		测试，就是不解打包，只是查看包中有哪些文件</span><br><span class="line">	-v:		显示打包文件过程</span><br><span class="line">	-C:		指定解打包位置</span><br></pre></td></tr></table></figure>
 
-<h3 id="常用用法-4"><a href="#常用用法-4" class="headerlink" title="常用用法"></a>常用用法</h3><ul>
+<h2 id="常用用法-4"><a href="#常用用法-4" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
 <li>打包基本使用<br><img src="https://img-blog.csdnimg.cn/20190124162253203.png" alt="在这里插入图片描述"></li>
 <li>打包压缩目录<br><img src="https://img-blog.csdnimg.cn/20190124162348243.png" alt="在这里插入图片描述"></li>
 <li>解包基本使用<br><img src="https://img-blog.csdnimg.cn/20190124162548215.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt></li>
 </ul>
-<h1 id="tar-gz-和-tar-bz2-格式"><a href="#tar-gz-和-tar-bz2-格式" class="headerlink" title=".tar.gz 和 .tar.bz2 格式"></a>.tar.gz 和 .tar.bz2 格式</h1><p>其实 tar 命令是可以同时打包压缩的，前边是为了了解 Linux 中的打包和压缩的不同。<br>这才是 Linux 中最常用的压缩方式，一定要掌握。</p>
-<h3 id="命令格式-7"><a href="#命令格式-7" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar [选项] [-f 压缩包名] 源文件或目录</span><br><span class="line">选项：</span><br><span class="line">	-z:		压缩和解压缩 .tar.gz 格式</span><br><span class="line">	-j:		压缩和解压缩 .tar.bz2 格式</span><br></pre></td></tr></table></figure>
+<h1 id="tar-gz-和-tar-bz2-格式"><a href="#tar-gz-和-tar-bz2-格式" class="headerlink" title="tar.gz 和 tar.bz2 格式"></a>tar.gz 和 tar.bz2 格式</h1><p>其实 tar 命令是可以同时打包压缩的，前边是为了了解 Linux 中的打包和压缩的不同。<br>这才是 Linux 中最常用的压缩方式，一定要掌握。</p>
+<h2 id="命令格式-7"><a href="#命令格式-7" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar [选项] [-f 压缩包名] 源文件或目录</span><br><span class="line">选项：</span><br><span class="line">	-z:		压缩和解压缩 .tar.gz 格式</span><br><span class="line">	-j:		压缩和解压缩 .tar.bz2 格式</span><br></pre></td></tr></table></figure>
 
-<h3 id="常用用法-5"><a href="#常用用法-5" class="headerlink" title="常用用法"></a>常用用法</h3><ol>
+<h2 id="常用用法-5"><a href="#常用用法-5" class="headerlink" title="常用用法"></a>常用用法</h2><ol>
 <li>压缩与解压缩 “.tar.gz” 格式<br>压缩与打包：<br><img src="https://img-blog.csdnimg.cn/20190124164437841.png" alt="在这里插入图片描述"><br>解压缩与解打包：<br><img src="https://img-blog.csdnimg.cn/20190124164526761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
 <li>压缩与解压缩 “.tar.bz2” 格式<br>压缩与打包：<br><img src="https://img-blog.csdnimg.cn/20190124164656793.png" alt="在这里插入图片描述"><br>解压缩与解打包：<br><img src="https://img-blog.csdnimg.cn/20190124164747408.png" alt="在这里插入图片描述"></li>
 </ol>
@@ -834,7 +862,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ZIP-格式"><span class="nav-number">1.</span> <span class="nav-text">.ZIP 格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩命令-zip"><span class="nav-number">1.1.</span> <span class="nav-text">压缩命令 zip</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式"><span class="nav-number">1.1.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用用法"><span class="nav-number">1.1.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解压缩命令-unzip"><span class="nav-number">1.2.</span> <span class="nav-text">解压缩命令 unzip</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用用法-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gz-格式"><span class="nav-number">2.</span> <span class="nav-text">.gz 格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩命令-gzip"><span class="nav-number">2.1.</span> <span class="nav-text">压缩命令 gzip</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式-2"><span class="nav-number">2.1.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用用法-2"><span class="nav-number">2.1.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解压缩命令-gunzip"><span class="nav-number">2.2.</span> <span class="nav-text">解压缩命令 gunzip</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式-3"><span class="nav-number">2.2.1.</span> <span class="nav-text">命令格式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bz2-格式"><span class="nav-number">3.</span> <span class="nav-text">.bz2 格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩命令-bzip2"><span class="nav-number">3.1.</span> <span class="nav-text">压缩命令 bzip2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式-4"><span class="nav-number">3.1.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用用法-3"><span class="nav-number">3.1.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解压缩命令-bunzip2"><span class="nav-number">3.2.</span> <span class="nav-text">解压缩命令 bunzip2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式-5"><span class="nav-number">3.2.1.</span> <span class="nav-text">命令格式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tar-格式"><span class="nav-number">4.</span> <span class="nav-text">.tar 格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式-6"><span class="nav-number">4.0.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用用法-4"><span class="nav-number">4.0.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#tar-gz-和-tar-bz2-格式"><span class="nav-number">5.</span> <span class="nav-text">.tar.gz 和 .tar.bz2 格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式-7"><span class="nav-number">5.0.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用用法-5"><span class="nav-number">5.0.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ZIP-格式"><span class="nav-number">1.</span> <span class="nav-text">ZIP 格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩命令-zip"><span class="nav-number">1.1.</span> <span class="nav-text">压缩命令 zip</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式"><span class="nav-number">1.1.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用用法"><span class="nav-number">1.1.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解压缩命令-unzip"><span class="nav-number">1.2.</span> <span class="nav-text">解压缩命令 unzip</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用用法-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gz-格式"><span class="nav-number">2.</span> <span class="nav-text">gz 格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩命令-gzip"><span class="nav-number">2.1.</span> <span class="nav-text">压缩命令 gzip</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式-2"><span class="nav-number">2.1.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用用法-2"><span class="nav-number">2.1.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解压缩命令-gunzip"><span class="nav-number">2.2.</span> <span class="nav-text">解压缩命令 gunzip</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式-3"><span class="nav-number">2.2.1.</span> <span class="nav-text">命令格式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bz2-格式"><span class="nav-number">3.</span> <span class="nav-text">bz2 格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩命令-bzip2"><span class="nav-number">3.1.</span> <span class="nav-text">压缩命令 bzip2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式-4"><span class="nav-number">3.1.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用用法-3"><span class="nav-number">3.1.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解压缩命令-bunzip2"><span class="nav-number">3.2.</span> <span class="nav-text">解压缩命令 bunzip2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令格式-5"><span class="nav-number">3.2.1.</span> <span class="nav-text">命令格式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tar-格式"><span class="nav-number">4.</span> <span class="nav-text">tar 格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式-6"><span class="nav-number">4.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法-4"><span class="nav-number">4.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tar-gz-和-tar-bz2-格式"><span class="nav-number">5.</span> <span class="nav-text">tar.gz 和 tar.bz2 格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式-7"><span class="nav-number">5.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法-5"><span class="nav-number">5.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li></ol></div>
             
 
           </div>
