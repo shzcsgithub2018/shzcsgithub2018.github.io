@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6a6fff;
+  background: #cda7ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2995,11 +2995,11 @@ pre .javascript .function {
   }
 }
 body {
-  background-image: url("https://img-blog.csdnimg.cn/20190718011111387.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70");
+  background: url("/images/background.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 50% 50%;
-  background-size: 100% 100%;
+  background-position: center;
 }
 .post {
   margin-top: 0px;
