@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[July.18]]></title>
-    <url>%2F2019%2F07%2F18%2FJuly-18%2F</url>
-    <content type="text"><![CDATA[这只是个测试！]]></content>
-      <tags>
-        <tag>心情记录</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[软件安装与卸载]]></title>
     <url>%2F2019%2F07%2F17%2F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BD%2F</url>
     <content type="text"><![CDATA[APT 方式安装12345普通安装：apt-get install softname1 softname2 …;修复安装：apt-get -f install softname1 softname2... ;(-f Atemp to correct broken dependencies)重新安装：apt-get --reinstall install softname1 softname2... 卸载123移除式卸载：apt-get remove softname1 softname2 …;清除式卸载：apt-get purge sofname1 softname2...;(同上，也清除配置文件) Dpkg 方式安装1普通安装：dpkg -i package_name.deb 卸载123移除式卸载：dpkg -r pkg1 pkg2 ...;清除式卸载：dpkg -P pkg1 pkg2...; 源码安装一般如下： 12345./configuremakesudo make install 建议阅读 README. .bundle 格式比如VMware Player： 安装VMware-Player-15.0.2-10952284.x86_64.bundle 可能没有执行权限，需要添加权限：然后执行： 安装就开始了。 卸载卸载方法： 就能卸载 卸载Workstation的方法相同，输入 1sudo vmware-installer -u vmware-workstation 以后遇到再更新……]]></content>
