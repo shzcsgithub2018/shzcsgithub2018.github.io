@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[July.18]]></title>
+    <url>%2F2019%2F07%2F18%2FJuly-18%2F</url>
+    <content type="text"><![CDATA[这只是个测试！]]></content>
+      <tags>
+        <tag>心情记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[软件安装与卸载]]></title>
+    <url>%2F2019%2F07%2F17%2F%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BD%2F</url>
+    <content type="text"><![CDATA[APT 方式安装12345普通安装：apt-get install softname1 softname2 …;修复安装：apt-get -f install softname1 softname2... ;(-f Atemp to correct broken dependencies)重新安装：apt-get --reinstall install softname1 softname2... 卸载123移除式卸载：apt-get remove softname1 softname2 …;清除式卸载：apt-get purge sofname1 softname2...;(同上，也清除配置文件) Dpkg 方式安装1普通安装：dpkg -i package_name.deb 卸载123移除式卸载：dpkg -r pkg1 pkg2 ...;清除式卸载：dpkg -P pkg1 pkg2...; 源码安装一般如下： 12345./configuremakesudo make install 建议阅读 README. .bundle 格式比如VMware Player： 安装VMware-Player-15.0.2-10952284.x86_64.bundle 可能没有执行权限，需要添加权限：然后执行： 安装就开始了。 卸载卸载方法： 就能卸载 卸载Workstation的方法相同，输入 1sudo vmware-installer -u vmware-workstation 以后遇到再更新……]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>Linux命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[常用网络命令]]></title>
+    <url>%2F2019%2F07%2F17%2F%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[ifconfig 命令 项目 内容 命令名称 ifconfig 英文原意 configure a network interface 所在路径 /sbin/ifconfig 执行权限 超级用户 作用 配置网络接口 常用用法 该命令主要作用是查看 IP 地址的信息，直接输入 ifconfig 即可： ping 命令 项目 内容 命令名称 ping 英文原意 send ICMP ECHO_REQUEST to network hosts 所在路径 /binping 执行权限 所有用户 作用 向网络主机发送 ICMP 请求 命令格式12345ping [选项] IP选项： -b： 后面加入广播地址，用于对整个网段进行探测 -c 次数： 用于指定 ping 的次数 -s 字节： 指定探测包大小 常用用法 探测与指定主机通信，需要 ctrl +c终止 指定 ping 的次数 netstat 命令 项目 内容 命令名称 netstat 英文原意 Print network connections, routing tables, interface statistics , masquerade connections, and multicast memberships 所在路径 /bin/netstat 执行权限 所有用户 作用 输出网络连接、路由表、接口统计、伪装链接和组播成员。 命令格式12345678910netstat [选项]选项： -a: 列出所有网络状态，包括 Socket 程序 -c 秒数：指定每隔几秒刷新一次网络状态 -n： 使用 IP 地址和端口号显示， 不适用域名和服务器 -p： 显示 PID 和程序名 -t： 显示使用 TCP 协议端口的连接情况 -u： 显示使用的 UDP 协议端口的连接情况 -l： 仅显示监听状态的连接 -r: 显示路由表 常用用法 查看本机开启的端口这是本机最常用的方式，使用 “-tuln” 。去掉 “-l” 选项，就可以看到建立连接状态的链接。 查看本机有哪些程序开启的端口]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>Linux命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关机和重启命令]]></title>
+    <url>%2F2019%2F07%2F17%2F%E5%85%B3%E6%9C%BA%E5%92%8C%E9%87%8D%E5%90%AF%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[sync 命令 项目 内容 命令名称 sync 英文原意 flush file system buffers 所在路径 /usr/sync 执行权限 所有用户 作用 刷新文件系统缓冲区 该命令的作用是把内存中的数据强制写入硬盘，这个命令在常规关机的命令中会自动执行，如果不放心，则手动之行几次，避免数据丢失。 shutdown 命令 项目 内容 命令名称 shutdown 英文原意 bring the system down 所在路径 /sbin/shutdown 执行权限 超级用户 作用 关机和重启 命令格式12345shutdown [选项] [时间] [警告信息]选项： -c: 取消已经执行的shutdown -h: 关机 -r: 重启 时间具体格式： reboot 命令立刻重启命令 halt 和 poweroff 命令 两个都是关机命令，直接执行即可。]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>Linux命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[压缩解压命令]]></title>
+    <url>%2F2019%2F07%2F17%2F%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[在系统中，如果有大量的文件需要复制和保存，那么把他们打成压缩包是不错的选择。打包压缩作为常规操作，在 Windows 和 Linux 中都比较常见。Windows 中常见的压缩包格式主要有 “.zip” “.rar” “.7z” 等；Linux 中常见的压缩格式有十几种，比如 “.zip” “.gz” “.bz2” “.tar” “.tar.gz” “.tar.bz2” 等。 ZIP 格式压缩命令 zip 项目 内容 命令名称 zip 英文原意 package and compress (archive) files 所在路径 /usr/bin/zip 执行权限 所有用户 作用 压缩文件或目录 命令格式123zip [选项] 压缩包名 源文件或源目录选项： -r: 压缩目录 常用用法 压缩文件 解压缩命令 unzip 项目 内容 命令名称 unzip 英文原意 list,test and extract compressed files in a ZIP archive 所在路径 /usr/bin/unzip 执行权限 所有用户 作用 列表、测试和提取压缩文件中的文件 命令格式123unzip [选项] 压缩包名选项： -d 位置: 指定解压缩位置 常用用法 解压缩到指定位置 gz 格式Linux 中最常用的压缩格式 压缩命令 gzip 项目 内容 命令名称 gzip 英文原意 compress or expand files 所在路径 /bin/gzip 执行权限 所有用户 作用 压缩文件或目录 命令格式1234567gzip [选项] 源文件选项： -c: 将压缩数据输出到标准输出，可以用于保留源文件(使用重定向命令) -d: 解压缩 -r: 压缩目录 -v: 显示压缩文件的信息 -数字： 用于指定压缩等级，-1 最低，压缩比最差；-9 最高；默认 -6 常用用法 基本压缩我们发现，压缩之后源文件消失了，所有该压缩命令不保留源文件 保留源文件压缩 压缩目录发现压缩目录后，目录依然存在，并没有变成压缩文件。进入目录后，发现目录中的文件被压缩了。这是因为 Linux 中，压缩和打包是分开处理的，而 gzip 只会命令只会压缩，不能打包，所以才会出现这样的问题。 解压缩命令 gunzip 项目 内容 命令名称 gunzip 英文原意 compress or expand files 所在路径 /bin/gunzip 执行权限 所有用户 作用 解压缩文件或目录 命令格式123gunzip [选项] 文件或目录选项： -r： 解压缩目录 该命令与 gzip -d 作用相同。且这个命令只能解压缩，不能解打包。 bz2 格式这是 Linux 中的另一种压缩格式，从理论上讲，改格式算法更先进、压缩比更好；而 “.gz” 格式相对来说压缩时间更短。 压缩命令 bzip2 项目 内容 命令名称 bzip2 英文原意 a block-sorting file compressor 所在路径 /usr/bin/bzip2 执行权限 所有用户 作用 .bz2 格式的压缩命令 命令格式123456bzip [选项] 源文件选项： -d: 解压缩 -k： 压缩时，保留源文件 -v： 显示压缩的详细信息 -数字： 与 gzip 命令的作用一样 常用用法大部分用法与 gzip 相同，注意，bzip 不支持压缩目录，没有 -r 选项。 解压缩命令 bunzip2 项目 内容 命令名称 bunzip2 英文原意 a block-sorting file compressor 所在路径 /usr/bin/bunzip2 执行权限 所有用户 作用 .bz2 格式的解压缩命令 命令格式123bunzip [选项] 源文件选项： -k： 解压缩时，保留源文件 tar 格式写到这里，我们发现不论是 gzip 命令还是 bzip2 ，前者只能单独压缩目录下的子文件，后者不支持目录的压缩。Linux 中，对打包和压缩是区别对待的。也就是说，在 Linux 中，如果想把多个文件或目录打包到一个文件包中则使用的是 tar 命令；而压缩才使用 gzip 或 bzip2命令。.tar 格式的打包和解打包都是用 tar 命令，区别只是选项不同。 项目 内容 命令名称 tar 英文原意 tar 所在路径 /bin/tar 执行权限 所有用户 作用 打包与解打包命令 命令格式12345678tar [选项] [-f 压缩包名] 源文件或目录选项： -c: 打包 -x: 解打包 -f： 指定压缩包文件名 -t: 测试，就是不解打包，只是查看包中有哪些文件 -v: 显示打包文件过程 -C: 指定解打包位置 常用用法 打包基本使用 打包压缩目录 解包基本使用 tar.gz 和 tar.bz2 格式其实 tar 命令是可以同时打包压缩的，前边是为了了解 Linux 中的打包和压缩的不同。这才是 Linux 中最常用的压缩方式，一定要掌握。 命令格式1234tar [选项] [-f 压缩包名] 源文件或目录选项： -z: 压缩和解压缩 .tar.gz 格式 -j: 压缩和解压缩 .tar.bz2 格式 常用用法 压缩与解压缩 “.tar.gz” 格式压缩与打包：解压缩与解打包： 压缩与解压缩 “.tar.bz2” 格式压缩与打包：解压缩与解打包：]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>Linux命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[搜索命令]]></title>
+    <url>%2F2019%2F07%2F17%2F%E6%90%9C%E7%B4%A2%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[使用搜索命令的时候，如果搜索范围过大，则会给服务器造成巨大的压力，所以不要在服务器访问高峰期执行大范围搜索命令。 whereis 命令 项目 内容 命令名称 whereis 英文原意 locate the binary,source,and manual page files for a command 所在路径 /usr/bin/whereis 执行权限 所有用户 作用 查找二进制命令、源文件和帮助文档的命令 命令格式1234whereis [选项] 命令选项： -b: 只查找二进制命令 -m: 只查找帮助文档 常用用法 查看命令 不能查看普通文件 使用选项 which 命令 项目 内容 命令名称 which 英文原意 shows the full path of (shell) commands 所在路径 /usr/bin/which 执行权限 所有用户 作用 列出命令的所在路径 与 whereis 的区别 which: 查找二进制命令(可执行文件) whereis: 查找二进制命令的同时,查找到帮助文档 locate 命令 项目 内容 命令名称 locate 英文原意 fubd fukes by name 所在路径 /usr/bin/locate 执行权限 所有用户 作用 按照文件名搜索文件 命令格式123locate [选项] 文件名选项： -i: 忽略大小写 常用用法 基本用法可以搜索普通文件也可以搜索系统文件 locate 命令的数据库使用中，可能会发现如下问题：这是因为，locate 命令不会直接搜索硬盘，而会搜索 locate 数据库，优点是耗费资源小、搜索速度快；缺点是不能实时更新，需要等用户退出或者重启系统才更新，所以无法查找新建立的文件。如果不想重启，可以使用如下命令： locate 配置文件发现这样依然会找不到文件，为什么呢？来看看 locate 配置文件就明白了这是 locate 时禁止搜索的拓展名、目录和文件系统。而 /tmp 在名单内，所有搜索不到。 find 命令 项目 内容 命令名称 find 英文原意 search for files in a directory hierarchy 所在路径 /bin/find 执行权限 所有用户 作用 在目录中搜索文件 命令格式1234567891011121314151617find 搜索路径 [选项] 搜索内容选项： -name: 按照文件名搜索 -iname： 按照文件名搜索，不区分文件名的大小写 -inum： 按照 inode 号搜索 -size [+-]大小： 按照指定大小搜索文件 -atime [+-]时间： 按照文件访问时间 -mtime [+-]时间： 按照文件修改时间 -ctime [+-]时间： 按照文件状态修改时间 -perm 权限模式： 查找文件的权限刚好等于 "权限模式" 的文件 -perm -权限模式： 查找文件的权限全部包含 "权限模式" 的文件 -perm +权限模式： 查找文件的权限至少包含一个 "权限模式" 的文件 -user 用户名: 按照所有者查找文件 -group 组名： 按照所属组查找文件 -nouser： 查找没有所有者的文件 -type d/f/l: 查找目录/普通文件/软连接文件 -a/-o/not: 逻辑 与、或、非 常用用法 按照文件名搜索注意，find 命令是完全匹配的，即搜 hello.c，就不会搜 hello.c.a。还可以使用不区分大小写的 -iname 命令，用法相同；还有 inum，这个可以用来区分硬链接文件。 按照文件大小搜索 搜索指定大小文件 搜索比指定大小大的文件 搜索比指定大小小的文件关于大小的单位： 按照修改时间搜索主要解释 [+-] 含义。比如用 mtime ：-5：代表 5 天内修改的文件5：代表前 5~6 天修改的文件+5：代表6天前修改的文件注意 mtime ，ctime， atime 的单位是天，还可以用 mmin，cmin，amin 单位是分钟。]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>Linux命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[帮助命令]]></title>
+    <url>%2F2019%2F07%2F17%2F%E5%B8%AE%E5%8A%A9%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[Linux 自带的帮助文档是最准确、最权威可靠的资料。 man 命令 项目 内容 命令名称 man 英文原意 format and display the on-line manual pages 所在路径 /usr/bin/man 执行权限 所有用户 作用 显示联机帮助手册 命令格式1234man [选项] 命令选项： -f: 查看命令拥有那个级别的帮助 -k: 查看和命令相关的所有帮助 帮助命令的重点在于如何查询信息！ 常用用法 man 命令的使用方法通过该命令，我们就可以知道man的用法。通过h，我们知道了更多的用法： man 命令的快捷键 快捷键 作用 ↑ 向上移动一行 ↓ 向下移动一行 Pg Up B 向上翻一页 Space PgDn 向下翻一页 g 移动到第一页 G 移动到最后一页 q 退出 /字符串 从当前页向下搜索 ?字符串 从当前页向上搜索 n 搜索字符串时，找到下一个字符串 N 搜索字符串时，找到上一个字符串 man 命令的帮助级别 man 命令的选项可以通过 -f 选项来看命令拥有的级别。比如：以下两种方法都可以查看制定级别的命令：可以通过 -k 选项来查看命令中包含指定字符串的所有相关命令。比如：在系统中还有两个命令：whatis： 这个命令和 man -f 是一致的；apropos：这个命令的作用和 man -k 是一致的。 几个有意思的命令whatis 命令：命令是什么whereis 命令：命令在哪里whoami：显示当前登录用户 info 命令info 命令也可以获取帮助，和 man 不同的是，info 命令的帮助信息是一套完整的资料，每个单独的帮助信息只是这个资料的某一小章节。 info 命令的快捷键 快捷键 作用 ↑ 向上移动一行 ↓ 向下移动一行 Pg Up 向上翻一页 PgDn 向下翻一页 Tab 在有 “*” 的节点间进行切换 Enter 进入有 “*” 的子页面，查看详细帮助 u 进入上一层信息 n 进入下一小节信息 p 进入上一小节信息4 ? 查看帮助信息 q 退出 help 命令该命令只能查看 shell 内置命令的帮助，完全可以用 man 替代，并不经常使用。‘’ –help 选项Linux 许多命令都可以使用 –help 选项查看帮助，这种方法非常简单，输出的是 man 命令的信息简要版。比如：]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>Linux命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[权限管理命令]]></title>
+    <url>%2F2019%2F07%2F17%2F%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[权限介绍 为什么需要权限平时所使用的计算机都是个人计算机，都是自己或者自己信任的人在使用，所以感受不到权限的作用，都是使用管理员权限。可是，对于服务器来说，使用者非常多，服务器里保存的数据有些非常重要，有些价值非常高，因此对权限当然是设定的越详细越好，用户的分级越明确越好。比如在银行里，行长和柜台服务人员对于存储数据的服务器的权限肯定不同。在服务器上，绝对不是所有的用户都是用 root 身份登录，而要根据不同的工作需要和职位需要，合理分配用户等级和权限等级。 文件的所有者、所属组和其他人前面讲 “ls -l” 时，简单说过所有者和所属组的含义，命令的第三列代表所有者，第四列代表所属组。文件的所有者一般就是这个文件的创建者，比如 data 文件，我们在 shz1 下创建的，所以所有者就是 shz1；系统中，大部分系统文件都是 root 建立的，所以绝大多数系统文件的所有者都是 root。文件的所属组，要想解释这个概念，我们先要知道用户组的概念。用户组就是一组用户的集合，为什么要把一组用户放在一起呢？当然是为了方便管理。比如，我们有100位用户，都需要分配相同的权限，我们如果一个个用户去配置，岂不是累死了0.0……,而将所有用户分到一个用户组，给整个组分配权限，不管多少用户，一次就好了，是不是非常方便啊！所属组的这个组，指的就是用户组。其他人，就是字面意思。 权限位含义前面讲 “ls -l” 时，我们知道第一列是文件的权限，如上图所示。总共10个字符：第一位代表文件类型： 字符 文件类型 描述 示例 - 普通文件 用来在辅助存储设备（磁盘）上存储数据 程序源代码、可执行程序、图片、声音、文字、视频等 d 目录文件 linux 中一切都是文件，目录也是 /root /home l 软链接文件 用于不同目录下文件的共享（快捷方式） 创建已存在文件的符号链接时，系统就创建了一个链接文件，这个链接文件指向已存在的文件 b(块) c(字符) 设备文件 用来访问硬件设备 键盘、打印机、光驱、硬盘等 p 管道符文件 特殊类型文件 Linux 系统下，进程之间通信可以通过该文件完成 s 套接字文件 特殊类型文件 一些服务支持 socket 访问，就会产生这样的文件 第2 ~ 4位代表文件所有者的权限；第5 ~ 7位代表文件所属组的权限；第8 ~ 10位代表其他人的权限。他们所能拥有的权限都是 “rwx” 权限：r：read 读取权限；w：write 写权限；x：execute 执行权限。如果有字母，代表相应的权限；如果是 “-“ ，则代表没有对应权限。 chmod 命令 项目 内容 命令名称 chmod 英文原意 change file mode bits 所在路径 /bin/chmod 执行权限 所有用户 作用 修改文件的权限模式 命令格式123chmod [选项] 权限模式 文件名选项： -R： 递归设置权限，也就是给子目录中的所有文件设定权限 权限模式格式： [用户身份] 赋予方式 权限 用户身份 符号 含义 u 代表所有者(user) g 代表所属组(group) o 代表其他人(other) a 代表全部身份(all) 缺省默认是a 赋予方式 符号 含义 + 加入权限 - 减去权限 = 设置权限 权限 符号 含义 r 读取权限 w 写权限 x 执行权限 权限还可以用数字表示： 符号 对应数字 r 4 w 2 x 1 比如 755权限：7=4+2+1 代表所有者有rwx权限5=4+1 代表所属组有r-x权限5=4+1 代表其他人有r-x权限 常用用法 用 “-“ 去掉权限 用 “+” 给多个用户添加权限 混合使用 数字权限 基本权限的含义 权限对文件的作用 r:可以读取文件中的数据。如果把权限对应到命令上，也就是可以使用 cat、more、less、head、tail、vim、gedit 等命令查看文件内容。 w:可以修改文件中的数据。如果把权限对应到命令上，也就是可以使用 vim、gedit、echo 等命令修改文件内容。 x:对文件有执行权限。注意，文件有了执行权限，该文件能不能执行，还要看文件中的代码是不是正确的语言代码。对文件来说，执行权限是最高权限。 权限对目录的作用 r:可以查看目录下的内容，也就是可以查看目录下有哪些子文件和子目录。如果把权限对应到命令上，就可以用 ls 在目录下查看目录下的内容啦。 w: 可以修改目录下的数据，也就是可以在目录中新建、删除、复制、剪切子文件或子目录。如果把权限对应到命令上，也就是可以使用 touch、rm、cp、mv 命令。对目录来说，写权限是最高权限。 x:目录是不能运行的，给目录执行权限，代表可以进入目录。如果把权限对应到命令上，也就是可以使用 cd 命令，进入目录。 其实这些权限位的含义可以联系 ext4 文件系统的组成，可知其所以然。 chown 命令 项目 内容 命令名称 chown 英文原意 change file owner and group 所在路径 /bin/chown 执行权限 所有用户 作用 改变文件和目录的所有者和所属组 命令格式123chown [选型] 所有者：所属组 文件或目录选项： -R: 递归设置权限 常用用法 修改文件的所有者只有文件的所有者和root用户有权修改文件的权限，如果普通用户需要对某个文件拥有最高权限的时候，是不能把其他人权限修改为最高权限，否则其他所有用户都拥有了文件的最高权限，这是非常不安全的做法。合理的做法是修改文件的所有者，这样既可以让普通用户有最高权限，也不会影响其他普通用户。看如下例子： 修改文件的所属组“:” 也可以用 “.” 替代；修改所属组，也是为了调整权限，即调整一组权限。 chgrp 命令 项目 内容 命令名称 chgrp 英文原意 change group ownership 所在路径 /bin/chgrp 执行权限 所有用户 作用 改变文件和目录的所属组 命令格式1chgrp 所属组 文件或目录 常用用法 修改改变文件的所属组 umask 默认权限 umask 权限的作用umask 权限是 Linux 权限的一种。在 Linux 中，所有的文件和目录都要有基本的权限，新建的文件和目录当然也要有默认的权限。在 Linux 中，通过 uamsk 默认权限来给所有新建立的文件和目录赋予初始权限，这一点和 Window 不一样，Windows 是通过继承上级目录的权限来给文件和目录赋予初始权限的。查看系统的 umask 权限：数值的 umask 权限，我们看到是： 0002 ，其中第一个 0 代表文件的特殊权限，暂时不谈；后 3 为数字 002 才是真正的 umask 默认权限。 umask 计算方法Linux 中，对于新建文件和目录有默认的最大权限：(1) 对文件来说，新建文件的默认最大权限是 666，没有执行权限。)(2) 对于目录来讲，新建目录的最大权限是 777。umask 计算方法很多，这里列举一个比较简单的，将 uamsk 换算成字母，文件和目录的权限也换算成字母(分别为 rw-rw-rw- 和 rwxrwxrwx )，减去对应字母即可。 umask 文件 (rw-rw-rw-) 目录(rwxrwxrwx) 0 0 2 —&gt; - - - - - - - w - r w - r w - r - - r w x r w x r - x 1 6 6 —&gt; - - x r w - r w - rw- - - - - - - r w - - - x - - x 0 3 3—&gt; - - - - w x - w x r w - r - - r - - r w x r - - r - - umask 默认权限的修改方法（1）临时修改 umask 默认权限，重启或重新登录就会失效(开新的终端也不同)（2）永久修改 umask 默认权限对于当前用户，在~/.bashrc 中 添加 umask 044 ，重新登录即可更改。对于所有用户，可以参照如下结果：]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>Linux命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[目录文件都可操作命令]]></title>
+    <url>%2F2019%2F07%2F17%2F%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E9%83%BD%E5%8F%AF%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[rm命令 项目 内容 命令名称 rm 英文原意 remove files or directories 所在路径 /bin/rm 执行权限 所有用户 作用 删除文件或目录 命令格式12345rm [选项] 文件或目录选项： -f： 强制删除(force) -i: 交互删除，删除之前会询问用户是否删除 -r: 递归删除，可以删除目录(recursive) 常用用法 基本用法，直接删除文件，默认-f 删除目录，需要使用-r选项，默认-f 强制删除，因为默认-f，所以不多介绍。 一般无论删除文件或是目录，都用rm -rf ，注意删除后很难恢复！ cp命令 项目 内容 命令名称 cp 英文原意 copy files and directoyies 所在路径 /bin/cp 执行权限 所有用户 作用 复制文件或目录 命令格式123456789cp [选项] 源文件 目标文件选项： -a: 相当于-dpr选项的集合 -d: 如果原文件为软链接（对硬链接无效），则复制出来的也是软链接 -i: 目标文件存在时询问，是否覆盖 -l: 把目标文件建立为源文件的硬链接文件，而不是复制源文件 -s: 把目标文件建立为源文件的软链接文件，而不是复制源文件 -p： 复制后目标文件保留原文件属性（包括所有者、属组、权限和时间） -r: 递归复制，用于复制目录 常用用法 基本用法复制文件：复制目录： 复制软链接属性如果源文件是软链接文件，复制时不加 “-d”，则实际复制的是软链接的源文件，，加 “-d” 后，则会复制软连接文件 mv命令 项目 内容 命令名称 mv 英文原意 move(rename)files 所在路径 /bin/mv 执行权限 所有用户 作用 移动文件或者改名 命令格式123456mv [选项] 源文件 目标文件选项： -f: 强制覆盖，如果目标已经存在，不询问，直接覆盖 -i： 交互移动，如果目标已经存在，询问是否直接覆盖 -n: 如果目标文件已经存在，则不会覆盖，也不询问用户 -v： 显示详细信息（移动过程） 常用用法 移动文件或目录(默认强制)注意移动目录不需要 “-r” 改名]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>Linux命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[文件操作命令]]></title>
+    <url>%2F2019%2F07%2F17%2F%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[计算机对数据的基本操作大多数可以归纳为增删改查，文件操作也不例外。 touch 命令 项目 内容 命令名称 touch 英文原意 change file timestamps 所在路径 /bin/touch 执行权限 所有用户 作用 修改文件的时间戳 命令格式123456touch [选项] 文件名或目录名选项： -a: 只修改文件的访问时间（Access Time) -c: 如果文件不存在，则不建立新文件 -d: 把文件的时间改为指定时间 -m: 只修改文件的数据修改时间(Modify Time) Linux中的每个文件都有三个时间，分别是访问时间(Access Time)、数据修改时间(Modify Time)和状态修改时间(Change Time)。这三个时间可以通过 stat 命令查看。touch命令只能手工指定是只修改访问时间或者数据修改时间，不能指定只修改状态时间。因为前两者的改变都会影响后者。注意，并没有文件创建时间！ 三种时间的含义读取文件内容 ——&gt; 改变Acess Time写文件内容 ——-&gt; 改变Modify Time and Change Time只修改文件状态 ——-&gt; 改变Change Time 常用用法 创建空文件 文件存在也不会报错，只是三个时间都会变为touch命令执行的时间 stat命令 项目 内容 命令名称 stat 英文原意 display file or file system status 所在路径 /usr/bin/stat 执行权限 所有用户 作用 显示文件或文件系统的详细信息 命令格式123stat [选项] 文件名或目录名选项： -f: 查看文件所在的文件系统的信息，而不是查看文件的信息 常用用法 查看文件的详细信息 查看文件系统时间 cat命令 项目 内容 命令名称 cat 英文原意 concatenate files and print on the standard output 所在路径 /bin/cat 执行权限 所有用户 作用 合并文件并打印输出到标准输出 命令格式1234567cat [选项] 文件名选项： -A: 相当于-vET选项的集合，用于列出所有的隐藏符号 -E: 列出每行结尾的回车符$ -n: 显示行号 -T: 把Tab键用^T显示出来 -v: 列出特殊字符 常用用法 cat命令会将文件的所有内容一次性显示出来。 cat不适合查看太大的文件。 查看文件内容 加选项 将标准输入写入文件 more命令 项目 内容 命令名称 more 英文原意 file perusal filter for crt viewin 所在路径 /bin/more 执行权限 所有用户 作用 分屏显示文件内容 命令格式1more 文件名 文件过大，cat命令会有心无力，这是more命令的作用更加明显。more命令比较简单，一般不用什么选项，命令会打开一个交互界面，可以识别一些命令。常用的交互命令如下： space:向下翻页 b:向上翻页 Enter:向下滚动一行 /字符串:搜索指定的字符串 q:退出 常用用法 分屏显示 less命令 项目 内容 命令名称 less 英文原意 opposite of more 所在路径 /usr/bin/less 执行权限 所有用户 作用 分行显示文件内容 命令格式1less 文件名 可以使用more的交互命令，也可以使用上下箭头。 常用用法 与more类似 head命令 项目 内容 命令名称 head 英文原意 output the first part of files 所在路径 /usr/bin/head 执行权限 所有用户 作用 显示文件开头内容 命令格式1234head [选项] 文件名选项： -n 行数： 从文件头开始，显示指定行数 -v: 显示文件名 常用用法 head默认显示文件开头的10行内容 使用-n tail命令 项目 内容 命令名称 tail 英文原意 output the last part of files 所在路径 /usr/bin/tail 执行权限 所有用户 作用 显示文件结尾内容 命令格式1234tail [选项] 文件名选项： -n 行数： 从文件结尾开始，显示指定行数 -f: 监听文件的新增内容 常用用法 不加选项与-n选项与head类似 监听文件新增内容 ln命令 项目 内容 命令名称 ln 英文原意 make links between file 所在路径 /bin/ln 执行权限 所有用户 作用 在文件之间建立链接 命令格式1234ln [选项] 源文件 目标文件选项： -s: 建立软链接文件。如果不加-s则建立硬链接文件 -f: 强制。如果目标文件已经存在，则删除目标文件后再建立链接文件 若想理解此命令的用法，需先了解Linux文件系统是如何工作的。我们以现在主流的ext4为例，加以说明。 ext4文件系统 ext4会把分区主要分为两个部分(暂时不提超级快)：一小部分用于保存inode信息；剩余的大部分用于保存block信息。 inode默认大小128Byte,用来记录文件的权限、文件的所有者和属组、文件大小、文件时间戳、文件的数据真正保存的block编号。block的大小可以使1KB、2KB、4KB，默认4KB。block用于实际的数据存储，如果一个block放不下数据，可以占用多个block。这些block可能连续，也可能分散。 注意，软链接文件的源文件必须写成绝对路径，而不能写成相对路径（硬链接没有这样的要求）；否则软链接会报错。 常用用法 硬链接先建立一个硬链接：观察源文件和链接文件：我们发现，两者几乎所有信息都相同，甚至inode号都相同，其原理如下：在inode信息中，是不会记录文件名称的，而是把文件名称记录在上级目录的block中。也就是说，目录block中记录的是这个目录下所有的一级子文件和子目录的文件名和inode的对应；而文件的block中记录的才是文件的实际数据。当我们查找一个文件，比如/home/shz1/hello.c，需要经历如下步骤：a. 首先找到根目录的inode(根目录的inode是已知的，是2)，然后判断用户是否有权限访问根目录的block。b. 如果有权限，则可以在根目录的block中找到/home的文件名以及对应的inode。c. 通过/home的inode号，找到/home的inode信息，接着判断用户是否有权限访问/home的block。……最终找到访问到/home/shz1/hello.c的block，这样就完成了该文件的读取与访问。显然，对于硬链接目标文件和源文件，实际上指的是同一个inode和block。硬链接的限制比较多，不能跨文件系统，也不能链接目录，而且源文件和硬链接文件除了inode号是一样，没有其他明显特征。这些特征使得硬链接并不常用。 软链接软链接也叫符号链接，相比硬链接，软链接常用很多，其实就相当于windows的快捷方式。再次注意，软链接源文件必须用绝对路径！否则报错。软链接标志明显，首先，权限为中 “l” 表示这是一个软连接文件；其次，在文件中通过 “-&gt;” 显示出源文件的完整名字。软链接并没有太多限制，可以跨文件系统，也可以链接目录。软链接block保存的并非文件内容，而是链接文件的inode号，通过该inode，读取inode信息，读取源文件block，读取文件内容。]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>Linux命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[目录操作命令]]></title>
+    <url>%2F2019%2F07%2F17%2F%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[ls命令 项目 内容 命令名称 ls 英文原意 list 所在路径 \bin\ls 执行权限 所有用户 作用 显示目录下的内容 命令格式1234567ls [选项] [文件名或目录名]选项： -a:显示所有文件 -d:显示目录信息 -h:按照我们习惯的方式显示文件大小 -i:显示文件的i节点数 -l:长格式显示 常用用法 “-a”选项显示所有文件，隐藏文件也不例外。Linux中以’.’开头的文件是隐藏文件，只有通过”-a”选项才能查看 “-l”选项 用于显示文件的详细信息。 该命令可以简写为 “ll” 。 第一列：权限 第二列：引用计数。文件的引用计数代表文件的硬链接个数，而目录的引用计数 代表该目录有多少个一级子目录。 第三列：所有者，也就是这个文件属于哪个用户。默认文件的创建用户。 第四列：所属组。 第五列：大小。默认单位字节。 第六列：文件修改时间。 第七列：文件名 “-d”选项 “-h”选项 “-i”选项每个文件都有一个inode的隐藏属性，可以看成系统搜索这个文件的ID，此选项即查看文件的inode。 cd命令 项目 内容 命令名称 cd 英文原意 change directory 所在路径 Shell内置命令 执行权限 所有用户 作用 切换所在目录 Linux命令按照来源分为两种：Shell内置命令和外部命令。所谓Shell内置命令，就是Shell自带的命令，这些命令是没有执行文件的；而外部命令就是由程序员单独开发的，是外来命令，所以会有命令的执行文件。Linux中绝大部分命令都是外部命令。 命令格式1cd [目录名] 常用用法 基本用法 简化用法这些简化用法用以加快目录切换。 特殊符号 作用 ~ 代表用户的家目录 |代表上次所在目录.|代表当前目录. .|代表上级目录 回到家目录的另一种方式 pwd 命令 项目 内容 命令名称 pwd 英文原意 print name of current/working directory 所在路径 /bin/pwd 执行权限 所有用户 作用 打印当前目录名 命令格式1pwd 常用用法 打印当前目录名 mkdir命令 项目 内容 命令名称 mkdir 英文原意 make directories 所在路径 /bin/mkdir 执行权限 所有用户 作用 创建空目录 命令格式123mkdir [选项] 目录名选项： -p： 递归建立所需目录 常用用法 建立目录 递归建立用于创建一连串空目录，所谓递归，即一级一级创建目录。 rmdir命令 项目 内容 命令名称 rmdir 英文原意 remove empty directories 所在路径 /bin/rmdir 执行权限 所有用户 作用 删除空目录 命令格式123rmdir [选项] 目录名选项： -p: 递归删除目录 常用用法 删除目录 递归删除目录rmdir只能删除空目录，作用非常有限，一旦目录中由内容，就会报错。 tree命令 项目 内容 命令名称 tree 英文原意 list contents of directories in tree-like format 所在路径 /usr/bin/tree 执行权限 所有用户 作用 显示目录树 命令格式123456tree [选项] [目录名]选项： -a: 显示所有目录和文件 -L n： 显示n层目录目录名： 默认为当前目录下 常用用法 不加选项和参数 显示n层目录]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>Linux命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux常用命令]]></title>
+    <url>%2F2019%2F07%2F17%2FLinux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[注意： 本文所有内容基于： 与其他版本系统可能在一些命令有不同之处。 命令提示符打开terminal，我们看到如下内容： 这就是Linux的命令提示符。其含义如下： shz1 显示的是当前登录用户； @ 分隔符号； shz-Lenovo-Y50p-70 当前系统的主机名； ~ 代表用户当前所在目录； $ 命令提示符，Linux用这个符号标示登录用户的权限等级。如果是超级用户，提示符就是#；如果是普通用户，提示符就是$。 命令基本格式Linux命令的基本格式： 命令 [选项] [参数] []中的代表可选项，有些命令可以不写选项或参数，也能执行。例如： 选项的作用选项用于调整命令的功能。例如：ls -l选项选项又分为短格式选项和长格式选项。-a为短格式选项，–all为长格式选项，一般情况，短格式指令是长格式指令的缩写，两者含义相同。有些选项只有短格式，比如： 参数的作用参数是命令的操作对象。一般文件、目录、用户和进程都可以作为参数被命令操作。例如：一开始我们使用ls时，并没有加参数，那是因为该命令有默认参数。命令一般都需要加入参数，用于指定操作的对象是谁；如果可以省略参数，则一般都有默认参数。 常用命令分类Linux命令成千上万，一个个挨着学显然不现实，也没必要！通过分类学习常用的操作命令即可。 目录操作命令 文件操作命令 目录和文件都能操作的命令 权限管理命令 帮助命令 搜索命令 压缩和解压命令 关机和重启命令 常用网络命令 软件安装与卸载]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>常用命令</category>
+      </categories>
+      <tags>
+        <tag>Linux命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Leetcode-链表-Easy]]></title>
+    <url>%2F2019%2F07%2F17%2F%E9%93%BE%E8%A1%A8-Easy%2F</url>
+    <content type="text"><![CDATA[21 合并两个有序链表解法一：迭代法 尝试通过合并条件，减少变量使用等方式，不断重构代码。 123456789101112131415161718struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2)&#123; struct ListNode *newl, *iter_newl; newl = (struct ListNode *)malloc(sizeof(struct ListNode)); iter_newl = newl; while (l1 &amp;&amp; l2)&#123; if (l1-&gt;val &lt;= l2-&gt;val)&#123; iter_newl-&gt;next = l1; l1 = l1-&gt;next; &#125; else&#123; iter_newl-&gt;next = l2; l2 = l2-&gt;next; &#125; iter_newl = iter_newl-&gt;next; &#125; iter_newl-&gt;next = l1 == NULL ? l2 : l1; return newl-&gt;next;&#125; 解法二：递归 每次取最小头节点 123456789101112struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2)&#123; if (l1 == NULL) return l2; if (l2 == NULL) return l1; if (l1-&gt;val &lt;= l2-&gt;val) &#123; l1-&gt;next = mergeTwoLists(l1-&gt;next, l2); return l1; &#125; else&#123; l2-&gt;next = mergeTwoLists(l2-&gt;next, l1); return l2; &#125;&#125; 该题可做拓展：合并多条有序链表 假设n条有序链表，则初始每个链表头节点有个指针，对所有指针所指节点构造小顶堆，取最顶节点，该指针向后迭代，将新节点插入小顶堆，如此迭代，将取出的节点穿起来即可。 83 删除有序链表中的重复元素12345678910111213struct ListNode* deleteDuplicates(struct ListNode* head)&#123; if (head == NULL) return NULL; struct ListNode *iter_new, *new; new = iter_new = head; while ((head = head-&gt;next) != NULL)&#123; if (iter_new-&gt;val != head-&gt;val)&#123; iter_new-&gt;next = head; iter_new = iter_new-&gt;next; &#125; &#125; iter_new-&gt;next = NULL;//注意切断后续可能存在的重复节点 return new;&#125; 141 环形链表快慢指针 1234567891011121314bool hasCycle(struct ListNode *head) &#123; struct ListNode *slow, *fast; int sign = 0; slow = fast = head; while (fast != NULL &amp;&amp; fast-&gt;next != NULL)&#123; slow = slow-&gt;next; fast = fast-&gt;next-&gt;next; if (slow == fast)&#123; sign = 1; break; &#125; &#125; return sign == 1 ? true : false;&#125; 还可用哈希解法，已经遍历的放在哈希表中，新节点做对比接口。 160 相交链表解法一：刚从环形链表中过来，想着将链表尾连在某个链表头上，即将问题转换为环形链表求入口问题。 12345678910111213141516171819202122232425262728struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) &#123; if (headA == NULL || headB == NULL) return NULL; struct ListNode *tailA = headA; struct ListNode *tailB = headB; while (tailA-&gt;next != NULL) tailA = tailA-&gt;next; while (tailB-&gt;next != NULL) tailB = tailB-&gt;next; if (tailA != tailB) return NULL; /*转换为环状链表，求入口*/ tailA-&gt;next = headB; struct ListNode *slow, *fast; slow = fast = headA; while (fast != NULL &amp;&amp; fast-&gt;next != NULL)&#123; slow = slow-&gt;next; fast = fast-&gt;next-&gt;next; if (slow == fast) break; &#125; slow = headA; while (slow != fast)&#123; slow = slow-&gt;next; fast = fast-&gt;next; &#125; tailA-next = NULL; return slow;&#125; 解法二：转换为等长链表，同时迭代判断交点。 1234567891011121314151617181920212223242526272829struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) &#123; if (headA == NULL || headB ==NULL) return NULL; int lenA = 0, lenB = 0; struct ListNode *iterA = headA, *iterB = headB; while (iterA-&gt;next != NULL)&#123; iterA = iterA-&gt;next; lenA++; &#125; while (iterB-&gt;next != NULL)&#123; iterB = iterB-&gt;next; lenB++; &#125; iterA = headA, iterB = headB; while (lenA != lenB)&#123; if (lenA &gt; lenB)&#123; lenA--; iterA = iterA-&gt;next; &#125; else&#123; lenB--; iterB = iterB-&gt;next; &#125; &#125; while (iterA != iterB)&#123; iterA = iterA-&gt;next; iterB = iterB-&gt;next; &#125; return iterA;&#125; 203 移除链表元素step1: 确定头节点 step2: 跳过指定元素 12345678910111213struct ListNode* removeElements(struct ListNode* head, int val)&#123; while (head != NULL &amp;&amp; head-&gt;val == val) head = head-&gt;next; if (head == NULL) return NULL; struct ListNode *iter = head; while (iter-&gt;next != NULL)&#123; if (iter-&gt;next-&gt;val == val) iter-&gt;next = iter-&gt;next-&gt;next; else iter = iter-&gt;next; &#125; return head;&#125; 206 反转链表解法一：头插法迭代 123456789101112struct ListNode* reverseList(struct ListNode* head)&#123; struct ListNode *new; new = (struct ListNode *)malloc(sizeof(struct ListNode)); new-&gt;next = NULL; while (head != NULL)&#123; struct ListNode *tmp = head; head = head-&gt;next; tmp-&gt;next = new-&gt;next; new-&gt;next = tmp; &#125; return new-&gt;next;&#125; 解法二：递归，这个递归有点不好想，我也是参考别人代码实现的，理解为主吧。 12345678struct ListNode* reverseList(struct ListNode* head)&#123; if (head == NULL || head-&gt;next == NULL) return head; struct ListNode *p = reverseList(head-&gt;next); head-&gt;next-&gt;next = head; head-&gt;next = NULL; return p;&#125; 234 回文链表前半部分链表反转(其实后半部分反转可能更好，与上一个问题代码形式统一)，两部分逐节点对比 找寻中间节点可以快慢指针，也可以如我这般计数找中点 12345678910111213141516171819202122232425bool isPalindrome(struct ListNode* head)&#123; struct ListNode *iter = head; int len = 0; while (iter != NULL)&#123; iter = iter-&gt;next; len++; &#125; iter = head; head= NULL; for (int i = 0; i &lt; len / 2; i++)&#123; struct ListNode *tmp = iter; iter = iter-&gt;next; tmp-&gt;next = head; head = tmp; &#125; if (len &amp; 1) iter = iter-&gt;next; while (head != NULL &amp;&amp; iter != NULL)&#123; if (head-&gt;val != iter-&gt;val) break; head = head-&gt;next; iter = iter-&gt;next; &#125; return head == NULL ? true : false;&#125; 237 删除链表中的节点1234void deleteNode(struct ListNode* node) &#123; node-&gt;val = node-&gt;next-&gt;val; node-&gt;next = node-&gt;next-&gt;next;&#125; 237 删除链表中的节点1234void deleteNode(struct ListNode* node) &#123; node-&gt;val = node-&gt;next-&gt;val; node-&gt;next = node-&gt;next-&gt;next;&#125; 707 设计链表123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108typedef struct Node &#123; int val; struct Node *next&#125;Node;typedef struct &#123; Node *head;&#125; MyLinkedList;/** Initialize your data structure here. */MyLinkedList* myLinkedListCreate() &#123; MyLinkedList *list; list = (MyLinkedList *)calloc(1, sizeof(MyLinkedList)); return list;&#125;/** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */int myLinkedListGet(MyLinkedList* obj, int index) &#123; if (index &lt; 0) return -1; Node *curr = obj-&gt;head; int i = 0; while (curr) &#123; if (i == index) return curr-&gt;val; i++; curr = curr-&gt;next; &#125; return -1;&#125;/** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */void myLinkedListAddAtHead(MyLinkedList* obj, int val) &#123; Node *node = (Node *)calloc(1, sizeof(Node)); node-&gt;val = val; node-&gt;next = obj-&gt;head; obj-&gt;head = node;&#125;/** Append a node of value val to the last element of the linked list. */void myLinkedListAddAtTail(MyLinkedList* obj, int val) &#123; Node *node = (Node *)calloc(1, sizeof(Node)); node-&gt;val = val; Node *curr = obj-&gt;head; while (curr) &#123; if (curr-&gt;next == NULL) &#123; curr-&gt;next = node; return; &#125; curr = curr-&gt;next; &#125;&#125;/** Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. */void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) &#123; if (index &lt;= 0) return myLinkedListAddAtHead(obj, val); Node *node = (Node *)calloc(1, sizeof(Node)); node-&gt;val = val; Node *curr = obj-&gt;head; int i = 1; while (curr) &#123; if (i == index) &#123; node-&gt;next = curr-&gt;next; curr-&gt;next = node; return; &#125; i++; curr = curr-&gt;next; &#125;&#125;/** Delete the index-th node in the linked list, if the index is valid. */void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) &#123; if (index &lt; 0) return; else if (index == 0) &#123; Node *tmp = obj-&gt;head; Node *pNext = tmp-&gt;next; obj-&gt;head = pNext; free(tmp); tmp = NULL; &#125; else &#123; Node *curr = obj-&gt;head; int i = 1; while (curr) &#123; if (i == index &amp;&amp; curr-&gt;next != NULL) &#123; Node *pNext = curr-&gt;next; curr-&gt;next = pNext-&gt;next; free(pNext); pNext = NULL; return; &#125; i++; curr = curr-&gt;next; &#125; &#125;&#125;void myLinkedListFree(MyLinkedList* obj) &#123; Node *curr = obj-&gt;head; while (curr) &#123; Node *tmp = curr; curr = curr-&gt;next; free(tmp); tmp = NULL; &#125;&#125; 876 链表的中间节点123456789struct ListNode* middleNode(struct ListNode* head)&#123; struct ListNode *slow, *fast; slow = fast = head; while (fast &amp;&amp; fast-&gt;next)&#123; slow = slow-&gt;next; fast = fast-&gt;next-&gt;next; &#125; return slow;&#125;]]></content>
+      <categories>
+        <category>Code</category>
+        <category>Leetcode</category>
+        <category>链表</category>
+        <category>Easy</category>
+      </categories>
+      <tags>
+        <tag>Leetcode</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PAT乙级题解1006-1010]]></title>
+    <url>%2F2019%2F07%2F15%2FPAT%E4%B9%99%E7%BA%A7%E9%A2%98%E8%A7%A31006-1010%2F</url>
+    <content type="text"><![CDATA[1006 换个格式输出整数首先判断输入数字的位数，然后分情况输出即可。 123456789101112131415161718192021222324252627#include&lt;stdio.h&gt;int main()&#123; int n; scanf("%d", &amp;n); int signB, signS; signB = signS = 0; if (n &gt;= 100) signB = signS = 1; else if (n &gt;= 10) signS = 1; if (signB) &#123; int count = n / 100; while (count--&gt;0) printf("B"); &#125; if (signS) &#123; int count = (n / 10) % 10; while (count--&gt;0) printf("S"); &#125; for (int i = 1; i &lt;= n % 10; i++) printf("%d", i); printf("\n"); return 0;&#125; 1007 素数对猜想筛法初始化素数表，然后统计要求范围内的差为2的素数对数即可。 1234567891011121314151617181920212223242526272829303132#include&lt;stdio.h&gt;#include&lt;string.h&gt;#define MAX (int)1e5+5int primeList[MAX];void init_PrimeList() &#123; memset(primeList, 1, sizeof(primeList)); primeList[0] = primeList[1] = 0; for (int i = 2; i &lt; MAX; i++) &#123; if (primeList[i] == 0) continue; for (int j = 2 * i; j &lt; MAX; j += i) primeList[j] = 0; &#125;&#125;int main()&#123; int n, sum = 0; scanf("%d", &amp;n); init_PrimeList(); int first_p = 2, second_p = 4; while (second_p &lt;= n) &#123; if (primeList[first_p] &amp;&amp; primeList[second_p]) sum++; first_p++; second_p++; &#125; printf("%d\n", sum); return 0;&#125; 1008 数组元素循环右移问题这是一道比较经典的题目，主要有如下几种解法。 第1种, 不管题目要求, 直接使用2个数组. 第2种, 利用C语言特性, 通过循环一个一个读取数据, 读取一个数据就通过计算把这个数据放在合适的位置, 利用这种方法, 简直可以实现数据”0”移动 第3种, 不进行数据移动, 而是控制打印顺序。 第4种, 使用链表实现 第5种, 使用数组模拟链表实现 第6种, 如果必须限定只能使用数组, 数组大小只能等于n.可以利用移位算法来实现，这是一种逆向思维的方法，从结果往回推，就很容易理解啦。 12345678910111213141516171819202122232425#include&lt;stdio.h&gt; //解法6void reverse(int a[], int m, int n) &#123; for (int i = m; i &lt;= (n + m) / 2; i++) &#123; int tmp = a[i]; a[i] = a[n + m - i]; a[n + m -i] = tmp; &#125;&#125;int main()&#123; int n, m, num[105]; scanf("%d%d", &amp;n, &amp;m); m %= n; for (int i = 0; i &lt; n; i++) scanf("%d", &amp;num[i]); reverse(num, 0, n-m-1); reverse(num, n-m, n-1); reverse(num, 0, n-1); for (int i = 0; i &lt; n; i++) printf("%d%s", num[i], (i - n + 1 ? " " : "\n")); return 0;&#125; 1009 说反话先全局反转，然后局部反转即可。 12345678910111213141516171819202122232425262728293031323334#include&lt;stdio.h&gt;#include&lt;string.h&gt;#define MAX 85void reverse(char a[], int m, int n)&#123; for (int i = m; i &lt;= (m + n) / 2; i++) &#123; char tmp = a[i]; a[i] = a[n + m - i]; a[n + m - i] = tmp; &#125;&#125;int main()&#123; char s[MAX]; int len; gets(s); len = strlen(s); reverse(s, 0, len - 1); int first_p = 0, secode_p = 0; while (secode_p &lt; len) &#123; if (s[secode_p] == ' ') &#123; // printf("%d %d\n", first_p, secode_p - 1); reverse(s, first_p, secode_p - 1); first_p = secode_p + 1; &#125; secode_p++; &#125; reverse(s, first_p, secode_p - 1); puts(s); return 0;&#125; 1010 一元多项式求导很简单的一道题目，但是题目的描述实在是太烂了，参考别人的代码才明白题目的意思，A过了。 12345678910111213141516#include&lt;stdio.h&gt;int main()&#123; int coe, index, sign = 1; while (scanf("%d%d", &amp;coe, &amp;index) !=EOF) &#123; if (index == 0 || coe == 0) continue; if (!sign) printf(" "); printf("%d %d", coe * index, index - 1); sign = 0; &#125; if (sign) printf("0 0"); printf("\n"); return 0;&#125;]]></content>
+      <categories>
+        <category>Code</category>
+        <category>PAT</category>
+        <category>Basic Level</category>
+      </categories>
+      <tags>
+        <tag>PAT乙级</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PAT乙级题解1001-1005]]></title>
+    <url>%2F2019%2F07%2F15%2FPAT%E4%B9%99%E7%BA%A7%E9%A2%98%E8%A7%A31001-1005%2F</url>
+    <content type="text"><![CDATA[1001 害死人不偿命的(3n+1)猜想将奇数情况转换为偶数，最后只对偶数做除二处理。 123456789101112131415#include&lt;stdio.h&gt;int main()&#123; int n, count = 0; scanf("%d",&amp;n); while (n !=1 )&#123; count++; if (n &amp; 1) n = 3 * n + 1; n /= 2; &#125; printf("%d\n",count); return 0;&#125; 1002 写出这个数需要取每一位，以字符串方式输入取每位转化为整数更方便。用汉语拼音输出和的每一位，即建立0~9每个数字与拼音的映射即可。注意“零”是后鼻音(原谅我前后鼻音不分) 123456789101112131415161718#include&lt;stdio.h&gt;int main()&#123; char c; int sum = 0; char s[15][5] = &#123;"ling", "yi", "er", "san", "si", "wu", "liu", "qi", "ba", "jiu"&#125;; while ((c = getchar()) != '\n') sum += c - '0'; if(sum / 100) printf("%s ", s[sum / 100]); if(sum / 10) printf("%s ", s[sum / 10 % 10]); printf("%s", s[sum % 10]); return 0;&#125; 1003 我要通过！建立一个状态机，根据条件进行状态间的转换。需要满足的要求如下：要求一： P 和 T只出现一次，且P与T中间的A的个数大于等于1 要求二： 三段A序列个数满足关系：左边A序列个数 X 中间A序列个数 = 右边A序列个数 关于要求二的分析：最开始正确的序列来自于 “2” 中 “xPATx”,所以 “3” 中的 “aPbTc” 中，’a’ 和 ‘c’ 有相同数量的A，此时 ‘b’ 中只有一个A，满足此关系，之后的 “aPbATca” ,中间多一个A，右侧多了左边的A的数量，因为三为递归定义，同理，所有都满足此关系，类似数学归纳法思想，可得此等式。 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include&lt;stdio.h&gt;#include&lt;string.h&gt;#define MAX 105int main() &#123; int n; scanf("%d", &amp;n); while (n--&gt;0)&#123; char c, s[MAX]; int size1 = 0, size2 = 0, size3 = 0; int status = 0; int i = 0, len; scanf("%s", s); len = strlen(s); while (i &lt; len)&#123; c = s[i++]; if (status == -1) break; if (c != 'P' &amp;&amp; c != 'A' &amp;&amp; c != 'T')&#123; status = -1; continue; &#125; if (status == 0)&#123; if (c == 'A') size1++; else if (c == 'P') status = 1; else status = -1; &#125; else if (status == 1)&#123; if (c == 'A') size2++; else if (size2 &gt;= 1 &amp;&amp; c == 'T') status = 2; else status = -1; &#125; else if (status == 2)&#123; if (c == 'A') size3++; else status = -1; &#125; &#125; if (status == 2 &amp;&amp; size3 == size2 * size1) printf("YES\n"); else printf("NO\n"); &#125; return 0;&#125; 1004 成绩排名维护两个最值即可。 12345678910111213141516171819202122232425262728293031323334353637#include&lt;stdio.h&gt;#include&lt;string.h&gt;typedef struct&#123; char name[15]; char id[15]; int score;&#125;Record;void copy(Record *a, Record b)&#123; strcpy(a-&gt;name,b.name); strcpy(a-&gt;id, b.id); a-&gt;score = b.score;&#125;int main() &#123; Record max, min, tmp; int n, sign = 1; scanf("%d", &amp;n); while (n--&gt;0) &#123; scanf("%s%s%d", tmp.name, tmp.id, &amp;(tmp.score)); if (sign)&#123; copy(&amp;max, tmp); copy(&amp;min, tmp); sign = 0; &#125; if (max.score &lt; tmp.score) copy(&amp;max, tmp); if (min.score &gt; tmp.score) copy(&amp;min, tmp); &#125; printf("%s %s\n", max.name, max.id); printf("%s %s\n", min.name, min.id); return 0;&#125; 1005 继续(3n+1)猜想类似筛法求素数思想，筛玩剩下的从小到大输出即可。 123456789101112131415161718192021222324252627282930313233343536373839#include&lt;stdio.h&gt;#define MAX 10000int num[MAX]=&#123;0&#125;;int main()&#123; int k, n; scanf("%d", &amp;k); while (k--&gt;0) &#123; scanf("%d", &amp;n); num[n] = 1; &#125; for (int i = 0; i &lt; MAX; i++) &#123; if (num[i] == 0) continue; int tmp; tmp = i; while (tmp != 1) &#123; if (tmp&amp;1) tmp = tmp * 3 + 1; tmp /= 2; if (num[tmp] == 1) num[tmp] = 0; &#125; &#125; int sign = 1; for (int i = MAX - 1; i &gt;= 0; i--) &#123; if (num[i] == 1) &#123; if (sign) &#123; sign = 0; printf("%d", i); &#125; else &#123; printf(" %d", i); &#125; &#125; &#125; printf("\n"); return 0;&#125;]]></content>
+      <categories>
+        <category>Code</category>
+        <category>PAT</category>
+        <category>Basic Level</category>
+      </categories>
+      <tags>
+        <tag>PAT乙级</tag>
+      </tags>
+  </entry>
+</search>
