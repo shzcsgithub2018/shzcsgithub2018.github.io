@@ -145,7 +145,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190117175224187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190117180928233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190117180951518.png">
-<meta property="og:updated_time" content="2019-07-17T13:57:19.147Z">
+<meta property="og:updated_time" content="2019-07-17T14:04:08.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="目录操作命令">
 <meta name="twitter:description" content="ls命令   项目 内容    命令名称 ls   英文原意 list   所在路径 \bin\ls   执行权限 所有用户   作用 显示目录下的内容">
@@ -473,6 +473,8 @@
 <li><p>“-h”选项<br><img src="https://img-blog.csdnimg.cn/20190117171102689.png" alt="在这里插入图片描述"></p>
 </li>
 <li><p>“-i”选项<br>每个文件都有一个inode的隐藏属性，可以看成系统搜索这个文件的ID，此选项即查看文件的inode。<br><img src="https://img-blog.csdnimg.cn/201901171713213.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</li>
+</ul>
 <h1 id="cd命令"><a href="#cd命令" class="headerlink" title="cd命令"></a>cd命令</h1><table>
 <thead>
 <tr>
@@ -501,8 +503,6 @@
 <td>切换所在目录</td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <blockquote>
 <p>Linux命令按照来源分为两种：Shell内置命令和外部命令。所谓Shell内置命令，就是Shell自带的命令，这些命令是没有执行文件的；而外部命令就是由程序员单独开发的，是外来命令，所以会有命令的执行文件。Linux中绝大部分命令都是外部命令。</p>
 </blockquote>
@@ -629,7 +629,9 @@
 
 <h2 id="常用用法-4"><a href="#常用用法-4" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
 <li>删除目录<br><img src="https://img-blog.csdnimg.cn/20190117175043742.png" alt="在这里插入图片描述"></li>
-<li>递归删除目录<br><img src="https://img-blog.csdnimg.cn/20190117175224187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>rmdir只能删除空目录，作用非常有限，一旦目录中由内容，就会报错。<h1 id="tree命令"><a href="#tree命令" class="headerlink" title="tree命令"></a>tree命令</h1><table>
+<li>递归删除目录<br><img src="https://img-blog.csdnimg.cn/20190117175224187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>rmdir只能删除空目录，作用非常有限，一旦目录中由内容，就会报错。</li>
+</ul>
+<h1 id="tree命令"><a href="#tree命令" class="headerlink" title="tree命令"></a>tree命令</h1><table>
 <thead>
 <tr>
 <th>项目</th>
@@ -657,8 +659,6 @@
 <td>显示目录树</td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <h2 id="命令格式-5"><a href="#命令格式-5" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tree [选项]  [目录名]</span><br><span class="line">选项：</span><br><span class="line">	-a:		显示所有目录和文件</span><br><span class="line">	-L n：	显示n层目录</span><br><span class="line">目录名：</span><br><span class="line">	默认为当前目录下</span><br></pre></td></tr></table></figure>
 
 <h2 id="常用用法-5"><a href="#常用用法-5" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
