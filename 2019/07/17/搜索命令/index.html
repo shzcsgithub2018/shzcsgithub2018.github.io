@@ -146,7 +146,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190124132357497.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190124132408624.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190124132650550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-07-17T14:17:41.574Z">
+<meta property="og:updated_time" content="2019-07-17T15:34:55.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搜索命令">
 <meta name="twitter:description" content="使用搜索命令的时候，如果搜索范围过大，则会给服务器造成巨大的压力，所以不要在服务器访问高峰期执行大范围搜索命令。 whereis 命令   项目 内容    命令名称 whereis   英文原意 locate the binary,source,and manual page files for a command   所在路径 /usr/bin/whereis   执行权限 所有用户   作用">
@@ -568,14 +568,17 @@
 <h2 id="命令格式-2"><a href="#命令格式-2" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">find 搜索路径 [选项] 搜索内容</span><br><span class="line">选项：	</span><br><span class="line">	-name:				按照文件名搜索</span><br><span class="line">	-iname：			按照文件名搜索，不区分文件名的大小写</span><br><span class="line">	-inum：				按照 inode 号搜索</span><br><span class="line">	-size [+-]大小：		按照指定大小搜索文件</span><br><span class="line">	-atime [+-]时间：	按照文件访问时间</span><br><span class="line">	-mtime [+-]时间：	按照文件修改时间</span><br><span class="line">	-ctime [+-]时间：	按照文件状态修改时间</span><br><span class="line">	-perm 权限模式：		查找文件的权限刚好等于 "权限模式" 的文件</span><br><span class="line">	-perm -权限模式：		查找文件的权限全部包含 "权限模式" 的文件</span><br><span class="line">	-perm +权限模式：		查找文件的权限至少包含一个 "权限模式" 的文件</span><br><span class="line">	-user 用户名:		按照所有者查找文件</span><br><span class="line">	-group 组名：		按照所属组查找文件</span><br><span class="line">	-nouser：			查找没有所有者的文件</span><br><span class="line">	-type d/f/l:		查找目录/普通文件/软连接文件</span><br><span class="line">	-a/-o/not:			逻辑 与、或、非</span><br></pre></td></tr></table></figure>
 
 <h2 id="常用用法-2"><a href="#常用用法-2" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
-<li>按照文件名搜索<br><img src="https://img-blog.csdnimg.cn/20190124130820676.png" alt="在这里插入图片描述"><br>注意，find 命令是完全匹配的，即搜 hello.c，就不会搜 hello.c.a。<br>还可以使用不区分大小写的 -iname 命令，用法相同；<br>还有 inum，这个可以用来区分硬链接文件。</li>
-<li>按照文件大小搜索<ol>
+<li><p>按照文件名搜索<br><img src="https://img-blog.csdnimg.cn/20190124130820676.png" alt="在这里插入图片描述"><br>注意，find 命令是完全匹配的，即搜 hello.c，就不会搜 hello.c.a。<br>还可以使用不区分大小写的 -iname 命令，用法相同；<br>还有 inum，这个可以用来区分硬链接文件。</p>
+</li>
+<li><p>按照文件大小搜索</p>
+<ol>
 <li>搜索指定大小文件<br><img src="https://img-blog.csdnimg.cn/20190124132345732.png" alt="在这里插入图片描述"></li>
 <li>搜索比指定大小大的文件<br><img src="https://img-blog.csdnimg.cn/20190124132357497.png" alt="在这里插入图片描述"></li>
 <li>搜索比指定大小小的文件<br><img src="https://img-blog.csdnimg.cn/20190124132408624.png" alt="在这里插入图片描述"><br>关于大小的单位：<br><img src="https://img-blog.csdnimg.cn/20190124132650550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
 </ol>
 </li>
-<li>按照修改时间搜索<br>主要解释 [+-] 含义。比如用 mtime ：<br>-5 ：代表 5 天内修改的文件<br>5  ：  代表前 5~6 天修改的文件<br>+5：代表6天前修改的文件<br><strong>注意</strong> mtime ，ctime， atime 的单位是天，还可以用 mmin，cmin，amin 单位是分钟。</li>
+<li><p>按照修改时间搜索<br>主要解释 [+-] 含义。比如用 mtime ：<br>-5：代表 5 天内修改的文件<br>5：代表前 5~6 天修改的文件<br>+5：代表6天前修改的文件<br><strong>注意</strong> mtime ，ctime， atime 的单位是天，还可以用 mmin，cmin，amin 单位是分钟。</p>
+</li>
 </ul>
 
       
