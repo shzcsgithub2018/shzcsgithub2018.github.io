@@ -144,7 +144,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190123143238253.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190123144607489.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190123151125262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-07-17T13:14:12.189Z">
+<meta property="og:updated_time" content="2019-07-17T13:17:48.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="权限管理命令">
 <meta name="twitter:description" content="权限介绍 为什么需要权限平时所使用的计算机都是个人计算机，都是自己或者自己信任的人在使用，所以感受不到权限的作用，都是使用管理员权限。可是，对于服务器来说，使用者非常多，服务器里保存的数据有些非常重要，有些价值非常高，因此对权限当然是设定的越详细越好，用户的分级越明确越好。比如在银行里，行长和柜台服务人员对于存储数据的服务器的权限肯定不同。在服务器上，绝对不是所有的用户都是用 root 身份登录，">
@@ -432,7 +432,10 @@
 
       
         <h1 id="权限介绍"><a href="#权限介绍" class="headerlink" title="权限介绍"></a>权限介绍</h1><ol>
-<li>为什么需要权限<br>平时所使用的计算机都是个人计算机，都是自己或者自己信任的人在使用，所以感受不到权限的作用，都是使用管理员权限。<br>可是，对于服务器来说，使用者非常多，服务器里保存的数据有些非常重要，有些价值非常高，因此对权限当然是设定的越详细越好，用户的分级越明确越好。比如在银行里，行长和柜台服务人员对于存储数据的服务器的权限肯定不同。在服务器上，绝对不是所有的用户都是用 root 身份登录，而要根据不同的工作需要和职位需要，合理分配用户等级和权限等级。<a id="more"></a></li>
+<li>为什么需要权限<br>平时所使用的计算机都是个人计算机，都是自己或者自己信任的人在使用，所以感受不到权限的作用，都是使用管理员权限。<br>可是，对于服务器来说，使用者非常多，服务器里保存的数据有些非常重要，有些价值非常高，因此对权限当然是设定的越详细越好，用户的分级越明确越好。比如在银行里，行长和柜台服务人员对于存储数据的服务器的权限肯定不同。在服务器上，绝对不是所有的用户都是用 root 身份登录，而要根据不同的工作需要和职位需要，合理分配用户等级和权限等级。</li>
+</ol>
+<a id="more"></a>
+<ol start="2">
 <li>文件的所有者、所属组和其他人<br><img src="https://img-blog.csdnimg.cn/20190119141848522.png" alt="在这里插入图片描述"><br>前面讲  “ls -l” 时，简单说过所有者和所属组的含义，命令的第三列代表所有者，第四列代表所属组。<br>文件的所有者一般就是这个文件的创建者，比如 data 文件，我们在 shz1 下创建的，所以所有者就是 shz1；系统中，大部分系统文件都是 root 建立的，所以绝大多数系统文件的所有者都是 root。<br>文件的所属组，要想解释这个概念，我们先要知道用户组的概念。用户组就是一组用户的集合，为什么要把一组用户放在一起呢？当然是为了方便管理。比如，我们有100位用户，都需要分配相同的权限，我们如果一个个用户去配置，岂不是累死了0.0……,而将所有用户分到一个用户组，给整个组分配权限，不管多少用户，一次就好了，是不是非常方便啊！所属组的这个组，指的就是用户组。<br>其他人，就是字面意思。</li>
 <li>权限位含义<br><img src="https://img-blog.csdnimg.cn/2019011914392430.png" alt="在这里插入图片描述"><br>前面讲 “ls -l” 时，我们知道第一列是文件的权限，如上图所示。<br>总共10个字符：<br>第一位代表文件类型：</li>
 </ol>

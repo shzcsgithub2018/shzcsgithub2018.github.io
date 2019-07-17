@@ -137,7 +137,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190125145536964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/2019012514563399.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190125145927536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-07-17T13:14:12.189Z">
+<meta property="og:updated_time" content="2019-07-17T13:17:48.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用网络命令">
 <meta name="twitter:description" content="ifconfig 命令   项目 内容    命令名称 ifconfig   英文原意 configure a network interface   所在路径 /sbin/ifconfig   执行权限 超级用户   作用 配置网络接口">
@@ -451,35 +451,17 @@
 <td>作用</td>
 <td>配置网络接口</td>
 </tr>
+</tbody></table>
+<a id="more"></a>
+<h2 id="常用用法"><a href="#常用用法" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
+<li>该命令主要作用是查看 IP 地址的信息，直接输入 ifconfig 即可：<br><img src="https://img-blog.csdnimg.cn/20190125141730757.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><h1 id="ping-命令"><a href="#ping-命令" class="headerlink" title="ping 命令"></a>ping 命令</h1><table>
+<thead>
 <tr>
-<td><a id="more"></a></td>
-<td></td>
+<th>项目</th>
+<th>内容</th>
 </tr>
-<tr>
-<td>## 常用用法</td>
-<td></td>
-</tr>
-<tr>
-<td>- 该命令主要作用是查看 IP 地址的信息，直接输入 ifconfig 即可：</td>
-<td></td>
-</tr>
-<tr>
-<td><img src="https://img-blog.csdnimg.cn/20190125141730757.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></td>
-<td></td>
-</tr>
-<tr>
-<td># ping 命令</td>
-<td></td>
-</tr>
-<tr>
-<td>项目</td>
-<td>内容</td>
-</tr>
-<tr>
-<td>—–</td>
-<td>—</td>
-</tr>
-<tr>
+</thead>
+<tbody><tr>
 <td>命令名称</td>
 <td>ping</td>
 </tr>
@@ -500,9 +482,11 @@
 <td>向网络主机发送 ICMP 请求</td>
 </tr>
 </tbody></table>
+</li>
+</ul>
 <h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ping [选项] IP</span><br><span class="line">选项：</span><br><span class="line">	-b：		后面加入广播地址，用于对整个网段进行探测</span><br><span class="line">	-c 次数：	用于指定 ping 的次数</span><br><span class="line">	-s 字节：	指定探测包大小</span><br></pre></td></tr></table></figure>
 
-<h2 id="常用用法"><a href="#常用用法" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
+<h2 id="常用用法-1"><a href="#常用用法-1" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
 <li>探测与指定主机通信，需要 <kbd>ctrl</kbd> +<kbd>c</kbd>终止<br><img src="https://img-blog.csdnimg.cn/20190125142510550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
 <li>指定 ping 的次数<br><img src="https://img-blog.csdnimg.cn/20190125142617938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
 </ul>
@@ -536,7 +520,7 @@
 </tbody></table>
 <h2 id="命令格式-1"><a href="#命令格式-1" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">netstat [选项]</span><br><span class="line">选项：</span><br><span class="line">	-a:		列出所有网络状态，包括 Socket 程序</span><br><span class="line">	-c 秒数：指定每隔几秒刷新一次网络状态</span><br><span class="line">	-n：	使用 IP 地址和端口号显示， 不适用域名和服务器</span><br><span class="line">	-p：	显示 PID 和程序名</span><br><span class="line">	-t：	显示使用 TCP 协议端口的连接情况</span><br><span class="line">	-u：	显示使用的 UDP 协议端口的连接情况</span><br><span class="line">	-l：	仅显示监听状态的连接</span><br><span class="line">	-r:		显示路由表</span><br></pre></td></tr></table></figure>
 
-<h2 id="常用用法-1"><a href="#常用用法-1" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
+<h2 id="常用用法-2"><a href="#常用用法-2" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
 <li>查看本机开启的端口<br>这是本机最常用的方式，使用 “-tuln” 。去掉 “-l” 选项，就可以看到建立连接状态的链接。<br><img src="https://img-blog.csdnimg.cn/20190125145536964.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2019012514563399.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
 <li>查看本机有哪些程序开启的端口<br><img src="https://img-blog.csdnimg.cn/20190125145927536.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
 </ul>
@@ -732,7 +716,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ifconfig-命令"><span class="nav-number">1.</span> <span class="nav-text">ifconfig 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式"><span class="nav-number">1.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法"><span class="nav-number">1.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#netstat-命令"><span class="nav-number">2.</span> <span class="nav-text">netstat 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式-1"><span class="nav-number">2.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法-1"><span class="nav-number">2.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ifconfig-命令"><span class="nav-number">1.</span> <span class="nav-text">ifconfig 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法"><span class="nav-number">1.1.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ping-命令"><span class="nav-number">2.</span> <span class="nav-text">ping 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式"><span class="nav-number">2.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法-1"><span class="nav-number">2.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#netstat-命令"><span class="nav-number">3.</span> <span class="nav-text">netstat 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式-1"><span class="nav-number">3.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法-2"><span class="nav-number">3.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li></ol></div>
             
 
           </div>
