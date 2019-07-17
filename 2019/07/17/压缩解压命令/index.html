@@ -143,7 +143,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190124164526761.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190124164656793.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190124164747408.png">
-<meta property="og:updated_time" content="2019-07-17T13:20:46.846Z">
+<meta property="og:updated_time" content="2019-07-17T14:17:41.578Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="压缩解压命令">
 <meta name="twitter:description" content="在系统中，如果有大量的文件需要复制和保存，那么把他们打成压缩包是不错的选择。打包压缩作为常规操作，在 Windows 和 Linux 中都比较常见。Windows 中常见的压缩包格式主要有 “.zip” “.rar”  “.7z” 等；Linux 中常见的压缩格式有十几种，比如 “.zip” “.gz” “.bz2” “.tar” “.tar.gz” “.tar.bz2” 等。">
@@ -463,7 +463,9 @@
 <h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">zip [选项] 压缩包名 源文件或源目录</span><br><span class="line">选项：</span><br><span class="line">	-r:		压缩目录</span><br></pre></td></tr></table></figure>
 
 <h3 id="常用用法"><a href="#常用用法" class="headerlink" title="常用用法"></a>常用用法</h3><ul>
-<li>压缩文件<br><img src="https://img-blog.csdnimg.cn/20190124143509611.png" alt="在这里插入图片描述"><h2 id="解压缩命令-unzip"><a href="#解压缩命令-unzip" class="headerlink" title="解压缩命令 unzip"></a>解压缩命令 unzip</h2><table>
+<li>压缩文件<br><img src="https://img-blog.csdnimg.cn/20190124143509611.png" alt="在这里插入图片描述"></li>
+</ul>
+<h2 id="解压缩命令-unzip"><a href="#解压缩命令-unzip" class="headerlink" title="解压缩命令 unzip"></a>解压缩命令 unzip</h2><table>
 <thead>
 <tr>
 <th>项目</th>
@@ -491,12 +493,13 @@
 <td>列表、测试和提取压缩文件中的文件</td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <h3 id="命令格式-1"><a href="#命令格式-1" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">unzip [选项] 压缩包名</span><br><span class="line">选项：</span><br><span class="line">	-d 位置:		指定解压缩位置</span><br></pre></td></tr></table></figure>
 
 <h3 id="常用用法-1"><a href="#常用用法-1" class="headerlink" title="常用用法"></a>常用用法</h3><ul>
-<li>解压缩到指定位置<br><img src="https://img-blog.csdnimg.cn/20190124143934901.png" alt="在这里插入图片描述"><h1 id="gz-格式"><a href="#gz-格式" class="headerlink" title=".gz 格式"></a>.gz 格式</h1>Linux 中最常用的压缩格式<h2 id="压缩命令-gzip"><a href="#压缩命令-gzip" class="headerlink" title="压缩命令 gzip"></a>压缩命令 gzip</h2><table>
+<li>解压缩到指定位置<br><img src="https://img-blog.csdnimg.cn/20190124143934901.png" alt="在这里插入图片描述"></li>
+</ul>
+<h1 id="gz-格式"><a href="#gz-格式" class="headerlink" title=".gz 格式"></a>.gz 格式</h1><p>Linux 中最常用的压缩格式</p>
+<h2 id="压缩命令-gzip"><a href="#压缩命令-gzip" class="headerlink" title="压缩命令 gzip"></a>压缩命令 gzip</h2><table>
 <thead>
 <tr>
 <th>项目</th>
@@ -524,14 +527,14 @@
 <td>压缩文件或目录</td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <h3 id="命令格式-2"><a href="#命令格式-2" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">gzip [选项] 源文件</span><br><span class="line">选项：</span><br><span class="line">	-c:		将压缩数据输出到标准输出，可以用于保留源文件(使用重定向命令)</span><br><span class="line">	-d:		解压缩</span><br><span class="line">	-r:		压缩目录</span><br><span class="line">	-v:		显示压缩文件的信息</span><br><span class="line">	-数字：	用于指定压缩等级，-1 最低，压缩比最差；-9 最高；默认 -6</span><br></pre></td></tr></table></figure>
 
 <h3 id="常用用法-2"><a href="#常用用法-2" class="headerlink" title="常用用法"></a>常用用法</h3><ul>
 <li>基本压缩<br><img src="https://img-blog.csdnimg.cn/20190124150956803.png" alt="在这里插入图片描述"><br>我们发现，压缩之后源文件消失了，所有该压缩命令不保留源文件</li>
 <li>保留源文件压缩<br><img src="https://img-blog.csdnimg.cn/20190124151135941.png" alt="在这里插入图片描述"></li>
-<li>压缩目录<br><img src="https://img-blog.csdnimg.cn/20190124151341689.png" alt="在这里插入图片描述"><br>发现压缩目录后，目录依然存在，并没有变成压缩文件。进入目录后，发现目录中的文件被压缩了。这是因为 Linux 中，压缩和打包是分开处理的，而 gzip 只会命令只会压缩，不能打包，所以才会出现这样的问题。<h2 id="解压缩命令-gunzip"><a href="#解压缩命令-gunzip" class="headerlink" title="解压缩命令 gunzip"></a>解压缩命令 gunzip</h2><table>
+<li>压缩目录<br><img src="https://img-blog.csdnimg.cn/20190124151341689.png" alt="在这里插入图片描述"><br>发现压缩目录后，目录依然存在，并没有变成压缩文件。进入目录后，发现目录中的文件被压缩了。这是因为 Linux 中，压缩和打包是分开处理的，而 gzip 只会命令只会压缩，不能打包，所以才会出现这样的问题。</li>
+</ul>
+<h2 id="解压缩命令-gunzip"><a href="#解压缩命令-gunzip" class="headerlink" title="解压缩命令 gunzip"></a>解压缩命令 gunzip</h2><table>
 <thead>
 <tr>
 <th>项目</th>
@@ -559,12 +562,10 @@
 <td>解压缩文件或目录</td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <h3 id="命令格式-3"><a href="#命令格式-3" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gunzip [选项] 文件或目录</span><br><span class="line">选项：</span><br><span class="line">	-r：	解压缩目录</span><br></pre></td></tr></table></figure>
 
 <p>该命令与 gzip -d 作用相同。<br>且这个命令只能解压缩，不能解打包。</p>
-<h1 id="bz2-格式"><a href="#bz2-格式" class="headerlink" title=".bz2 格式"></a>.bz2 格式</h1><p>这是 Linux 中的另一种压缩格式，从理论上讲，改格式算法更先进、压缩比更好；而 “.gz” 格式相对来说压缩时间更短。 </p>
+<h1 id="bz2-格式"><a href="#bz2-格式" class="headerlink" title=".bz2 格式"></a>.bz2 格式</h1><p>这是 Linux 中的另一种压缩格式，从理论上讲，改格式算法更先进、压缩比更好；而 “.gz” 格式相对来说压缩时间更短。</p>
 <h2 id="压缩命令-bzip2"><a href="#压缩命令-bzip2" class="headerlink" title="压缩命令 bzip2"></a>压缩命令 bzip2</h2><table>
 <thead>
 <tr>
@@ -632,8 +633,9 @@
 <h3 id="常用用法-4"><a href="#常用用法-4" class="headerlink" title="常用用法"></a>常用用法</h3><ul>
 <li>打包基本使用<br><img src="https://img-blog.csdnimg.cn/20190124162253203.png" alt="在这里插入图片描述"></li>
 <li>打包压缩目录<br><img src="https://img-blog.csdnimg.cn/20190124162348243.png" alt="在这里插入图片描述"></li>
-<li>解包基本使用<br><img src="https://img-blog.csdnimg.cn/20190124162548215.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt><h1 id="tar-gz-和-tar-bz2-格式"><a href="#tar-gz-和-tar-bz2-格式" class="headerlink" title=".tar.gz 和 .tar.bz2 格式"></a>.tar.gz 和 .tar.bz2 格式</h1>其实 tar 命令是可以同时打包压缩的，前边是为了了解 Linux 中的打包和压缩的不同。<br>这才是 Linux 中最常用的压缩方式，一定要掌握。</li>
+<li>解包基本使用<br><img src="https://img-blog.csdnimg.cn/20190124162548215.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt></li>
 </ul>
+<h1 id="tar-gz-和-tar-bz2-格式"><a href="#tar-gz-和-tar-bz2-格式" class="headerlink" title=".tar.gz 和 .tar.bz2 格式"></a>.tar.gz 和 .tar.bz2 格式</h1><p>其实 tar 命令是可以同时打包压缩的，前边是为了了解 Linux 中的打包和压缩的不同。<br>这才是 Linux 中最常用的压缩方式，一定要掌握。</p>
 <h3 id="命令格式-7"><a href="#命令格式-7" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar [选项] [-f 压缩包名] 源文件或目录</span><br><span class="line">选项：</span><br><span class="line">	-z:		压缩和解压缩 .tar.gz 格式</span><br><span class="line">	-j:		压缩和解压缩 .tar.bz2 格式</span><br></pre></td></tr></table></figure>
 
 <h3 id="常用用法-5"><a href="#常用用法-5" class="headerlink" title="常用用法"></a>常用用法</h3><ol>

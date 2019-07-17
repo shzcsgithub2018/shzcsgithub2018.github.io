@@ -144,7 +144,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190123143238253.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190123144607489.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190123151125262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-07-17T13:17:48.002Z">
+<meta property="og:updated_time" content="2019-07-17T14:17:41.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="权限管理命令">
 <meta name="twitter:description" content="权限介绍 为什么需要权限平时所使用的计算机都是个人计算机，都是自己或者自己信任的人在使用，所以感受不到权限的作用，都是使用管理员权限。可是，对于服务器来说，使用者非常多，服务器里保存的数据有些非常重要，有些价值非常高，因此对权限当然是设定的越详细越好，用户的分级越明确越好。比如在银行里，行长和柜台服务人员对于存储数据的服务器的权限肯定不同。在服务器上，绝对不是所有的用户都是用 root 身份登录，">
@@ -532,53 +532,33 @@
 <td></td>
 <td></td>
 </tr>
+</tbody></table>
+<h1 id="chmod-命令"><a href="#chmod-命令" class="headerlink" title="chmod 命令"></a>chmod 命令</h1><table>
+<thead>
 <tr>
-<td># chmod 命令</td>
-<td></td>
-<td></td>
-<td></td>
+<th>项目</th>
+<th>内容</th>
 </tr>
-<tr>
-<td>项目</td>
-<td>内容</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>—–</td>
-<td>—</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
+</thead>
+<tbody><tr>
 <td>命令名称</td>
 <td>chmod</td>
-<td></td>
-<td></td>
 </tr>
 <tr>
 <td>英文原意</td>
 <td>change file mode bits</td>
-<td></td>
-<td></td>
 </tr>
 <tr>
 <td>所在路径</td>
 <td>/bin/chmod</td>
-<td></td>
-<td></td>
 </tr>
 <tr>
 <td>执行权限</td>
 <td>所有用户</td>
-<td></td>
-<td></td>
 </tr>
 <tr>
 <td>作用</td>
 <td>修改文件的权限模式</td>
-<td></td>
-<td></td>
 </tr>
 </tbody></table>
 <h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chmod [选项] 权限模式 文件名</span><br><span class="line">选项：</span><br><span class="line">	-R：	递归设置权限，也就是给子目录中的所有文件设定权限</span><br></pre></td></tr></table></figure>
@@ -704,29 +684,21 @@
 <td>5=4+1     代表其他人有r-x权限</td>
 <td></td>
 </tr>
-<tr>
-<td>## 常用用法</td>
-<td></td>
-</tr>
 </tbody></table>
-<ul>
-<li><p>用 “-“ 去掉权限<br><img src="https://img-blog.csdnimg.cn/20190119172921501.png" alt="在这里插入图片描述"></p>
-</li>
-<li><p>用 “+” 给多个用户添加权限<br><img src="https://img-blog.csdnimg.cn/20190119173221409.png" alt="在这里插入图片描述"></p>
-</li>
-<li><p>混合使用<br><img src="https://img-blog.csdnimg.cn/2019011917340123.png" alt="在这里插入图片描述"></p>
-</li>
-<li><p>数字权限<br><img src="https://img-blog.csdnimg.cn/20190119173437457.png" alt="在这里插入图片描述"></p>
-<h1 id="基本权限的含义"><a href="#基本权限的含义" class="headerlink" title="基本权限的含义"></a>基本权限的含义</h1></li>
-<li><p>权限对文件的作用</p>
-<ol>
+<h2 id="常用用法"><a href="#常用用法" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
+<li>用 “-“ 去掉权限<br><img src="https://img-blog.csdnimg.cn/20190119172921501.png" alt="在这里插入图片描述"></li>
+<li>用 “+” 给多个用户添加权限<br><img src="https://img-blog.csdnimg.cn/20190119173221409.png" alt="在这里插入图片描述"></li>
+<li>混合使用<br><img src="https://img-blog.csdnimg.cn/2019011917340123.png" alt="在这里插入图片描述"></li>
+<li>数字权限<br><img src="https://img-blog.csdnimg.cn/20190119173437457.png" alt="在这里插入图片描述"></li>
+</ul>
+<h1 id="基本权限的含义"><a href="#基本权限的含义" class="headerlink" title="基本权限的含义"></a>基本权限的含义</h1><ul>
+<li>权限对文件的作用<ol>
 <li>r:可以读取文件中的数据。如果把权限对应到命令上，也就是可以使用 cat、more、less、head、tail、vim、gedit 等命令查看文件内容。</li>
 <li>w:可以修改文件中的数据。如果把权限对应到命令上，也就是可以使用 vim、gedit、echo 等命令修改文件内容。</li>
 <li>x:对文件有执行权限。注意，文件有了执行权限，该文件能不能执行，还要看文件中的代码是不是正确的语言代码。对文件来说，执行权限是最高权限。</li>
 </ol>
 </li>
-<li><p>权限对目录的作用</p>
-<ol>
+<li>权限对目录的作用<ol>
 <li>r:可以查看目录下的内容，也就是可以查看目录下有哪些子文件和子目录。如果把权限对应到命令上，就可以用 ls 在目录下查看目录下的内容啦。</li>
 <li>w: 可以修改目录下的数据，也就是可以在目录中新建、删除、复制、剪切子文件或子目录。如果把权限对应到命令上，也就是可以使用 touch、rm、cp、mv 命令。对目录来说，写权限是最高权限。</li>
 <li>x:目录是不能运行的，给目录执行权限，代表可以进入目录。如果把权限对应到命令上，也就是可以使用 cd 命令，进入目录。</li>
@@ -764,9 +736,11 @@
 </tbody></table>
 <h2 id="命令格式-1"><a href="#命令格式-1" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chown [选型] 所有者：所属组 文件或目录</span><br><span class="line">选项：</span><br><span class="line">	-R:		递归设置权限</span><br></pre></td></tr></table></figure>
 
-<h2 id="常用用法"><a href="#常用用法" class="headerlink" title="常用用法"></a>常用用法</h2><ol>
+<h2 id="常用用法-1"><a href="#常用用法-1" class="headerlink" title="常用用法"></a>常用用法</h2><ol>
 <li>修改文件的所有者<br><strong>只有文件的所有者和root用户有权修改文件的权限</strong>，如果普通用户需要对某个文件拥有最高权限的时候，是不能把其他人权限修改为最高权限，否则其他所有用户都拥有了文件的最高权限，这是非常不安全的做法。合理的做法是修改文件的所有者，这样既可以让普通用户有最高权限，也不会影响其他普通用户。看如下例子：<br><img src="https://img-blog.csdnimg.cn/20190123130740329.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li>修改文件的所属组<br><img src="https://img-blog.csdnimg.cn/20190123131000212.png" alt="在这里插入图片描述"><br>“:”  也可以用 “.” 替代；<br>修改所属组，也是为了调整权限，即调整一组权限。<h1 id="chgrp-命令"><a href="#chgrp-命令" class="headerlink" title="chgrp 命令"></a>chgrp 命令</h1><table>
+<li>修改文件的所属组<br><img src="https://img-blog.csdnimg.cn/20190123131000212.png" alt="在这里插入图片描述"><br>“:”  也可以用 “.” 替代；<br>修改所属组，也是为了调整权限，即调整一组权限。</li>
+</ol>
+<h1 id="chgrp-命令"><a href="#chgrp-命令" class="headerlink" title="chgrp 命令"></a>chgrp 命令</h1><table>
 <thead>
 <tr>
 <th>项目</th>
@@ -794,12 +768,12 @@
 <td>改变文件和目录的所属组</td>
 </tr>
 </tbody></table>
-</li>
-</ol>
 <h2 id="命令格式-2"><a href="#命令格式-2" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chgrp  所属组 文件或目录</span><br></pre></td></tr></table></figure>
 
-<h2 id="常用用法-1"><a href="#常用用法-1" class="headerlink" title="常用用法"></a>常用用法</h2><ol>
-<li>修改改变文件的所属组<br><img src="https://img-blog.csdnimg.cn/20190123133406380.png" alt="在这里插入图片描述"><h1 id="umask-默认权限"><a href="#umask-默认权限" class="headerlink" title="umask 默认权限"></a>umask 默认权限</h1></li>
+<h2 id="常用用法-2"><a href="#常用用法-2" class="headerlink" title="常用用法"></a>常用用法</h2><ol>
+<li>修改改变文件的所属组<br><img src="https://img-blog.csdnimg.cn/20190123133406380.png" alt="在这里插入图片描述"></li>
+</ol>
+<h1 id="umask-默认权限"><a href="#umask-默认权限" class="headerlink" title="umask 默认权限"></a>umask 默认权限</h1><ol>
 <li>umask 权限的作用<br>umask 权限是 Linux 权限的一种。在 Linux 中，所有的文件和目录都要有基本的权限，新建的文件和目录当然也要有默认的权限。<br>在 Linux 中，通过 uamsk 默认权限来给所有新建立的文件和目录赋予初始权限，这一点和 Window 不一样，Windows 是通过继承上级目录的权限来给文件和目录赋予初始权限的。<br>查看系统的 umask 权限：<br><img src="https://img-blog.csdnimg.cn/20190123142044661.png" alt="在这里插入图片描述"><br>数值的 umask 权限，我们看到是： 0002 ，其中第一个 0 代表文件的特殊权限，暂时不谈；后 3 为数字 002 才是真正的 umask 默认权限。</li>
 <li>umask 计算方法<br>Linux 中，对于新建文件和目录有默认的最大权限：<br>(1) 对文件来说，新建文件的默认最大权限是 666，没有执行权限。)<br>(2) 对于目录来讲，新建目录的最大权限是 777。<br>umask 计算方法很多，这里列举一个比较简单的，将 uamsk 换算成字母，文件和目录的权限也换算成字母(分别为 rw-rw-rw- 和 rwxrwxrwx )，减去对应字母即可。</li>
 </ol>
@@ -1028,7 +1002,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#权限介绍"><span class="nav-number">1.</span> <span class="nav-text">权限介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式"><span class="nav-number">1.1.</span> <span class="nav-text">命令格式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本权限的含义"><span class="nav-number">2.</span> <span class="nav-text">基本权限的含义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chown-命令"><span class="nav-number">3.</span> <span class="nav-text">chown 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式-1"><span class="nav-number">3.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法"><span class="nav-number">3.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chgrp-命令"><span class="nav-number">4.</span> <span class="nav-text">chgrp 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式-2"><span class="nav-number">4.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法-1"><span class="nav-number">4.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#umask-默认权限"><span class="nav-number">5.</span> <span class="nav-text">umask 默认权限</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#权限介绍"><span class="nav-number">1.</span> <span class="nav-text">权限介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chmod-命令"><span class="nav-number">2.</span> <span class="nav-text">chmod 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式"><span class="nav-number">2.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法"><span class="nav-number">2.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本权限的含义"><span class="nav-number">3.</span> <span class="nav-text">基本权限的含义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chown-命令"><span class="nav-number">4.</span> <span class="nav-text">chown 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式-1"><span class="nav-number">4.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法-1"><span class="nav-number">4.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chgrp-命令"><span class="nav-number">5.</span> <span class="nav-text">chgrp 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式-2"><span class="nav-number">5.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法-2"><span class="nav-number">5.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#umask-默认权限"><span class="nav-number">6.</span> <span class="nav-text">umask 默认权限</span></a></li></ol></div>
             
 
           </div>

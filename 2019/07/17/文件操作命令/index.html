@@ -145,7 +145,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190118161850698.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190118161933145.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190118164213752.png">
-<meta property="og:updated_time" content="2019-07-17T13:17:48.002Z">
+<meta property="og:updated_time" content="2019-07-17T14:12:28.428Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文件操作命令">
 <meta name="twitter:description" content="计算机对数据的基本操作大多数可以归纳为增删改查，文件操作也不例外。 touch 命令   项目 内容    命令名称 touch   英文原意 change file timestamps   所在路径 /bin/touch   执行权限 所有用户   作用 修改文件的时间戳">
@@ -466,12 +466,12 @@
 
 <p>Linux中的每个文件都有三个时间，分别是访问时间(Access Time)、数据修改时间(Modify Time)和状态修改时间(Change Time)。这三个时间可以通过  <em><strong>stat</strong></em> 命令查看。touch命令只能手工指定是只修改访问时间或者数据修改时间，不能指定只修改状态时间。因为前两者的改变都会影响后者。<br>注意，并没有文件创建时间！</p>
 <ul>
-<li>三种时间的含义<br>读取文件内容       ——&gt;        改变Acess Time<br>写文件内容            ——-&gt;        改变Modify Time and Change Time<br>只修改文件状态    ——-&gt;        改变Change Time<h2 id="常用用法"><a href="#常用用法" class="headerlink" title="常用用法"></a>常用用法</h2></li>
+<li>三种时间的含义<br>读取文件内容       ——&gt;        改变Acess Time<br>写文件内容            ——-&gt;        改变Modify Time and Change Time<br>只修改文件状态    ——-&gt;        改变Change Time</li>
 </ul>
-<ul>
-<li><p>创建空文件<br><img src="https://img-blog.csdnimg.cn/2019011810434566.png" alt="在这里插入图片描述"></p>
-</li>
-<li><p>文件存在也不会报错，只是三个时间都会变为touch命令执行的时间<br><img src="https://img-blog.csdnimg.cn/20190118104644587.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_12,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="常用用法"><a href="#常用用法" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
+<li>创建空文件<br><img src="https://img-blog.csdnimg.cn/2019011810434566.png" alt="在这里插入图片描述"></li>
+<li>文件存在也不会报错，只是三个时间都会变为touch命令执行的时间<br><img src="https://img-blog.csdnimg.cn/20190118104644587.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_12,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ul>
 <h1 id="stat命令"><a href="#stat命令" class="headerlink" title="stat命令"></a>stat命令</h1><table>
 <thead>
 <tr>
@@ -500,8 +500,6 @@
 <td>显示文件或文件系统的详细信息</td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <h2 id="命令格式-1"><a href="#命令格式-1" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">stat [选项] 文件名或目录名</span><br><span class="line">选项：</span><br><span class="line">	-f:		查看文件所在的文件系统的信息，而不是查看文件的信息</span><br></pre></td></tr></table></figure>
 
 <h2 id="常用用法-1"><a href="#常用用法-1" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
@@ -653,9 +651,9 @@
 <h2 id="命令格式-5"><a href="#命令格式-5" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">head [选项] 文件名</span><br><span class="line">选项：</span><br><span class="line">	-n 行数：	从文件头开始，显示指定行数</span><br><span class="line">	-v:			显示文件名</span><br></pre></td></tr></table></figure>
 
 <h2 id="常用用法-5"><a href="#常用用法-5" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
-<li><p>head默认显示文件开头的10行内容<br><img src="https://img-blog.csdnimg.cn/20190118114554981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</li>
-<li><p>使用-n<br><img src="https://img-blog.csdnimg.cn/2019011811465710.png" alt="在这里插入图片描述"></p>
+<li>head默认显示文件开头的10行内容<br><img src="https://img-blog.csdnimg.cn/20190118114554981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>使用-n<br><img src="https://img-blog.csdnimg.cn/2019011811465710.png" alt="在这里插入图片描述"></li>
+</ul>
 <h1 id="tail命令"><a href="#tail命令" class="headerlink" title="tail命令"></a>tail命令</h1><table>
 <thead>
 <tr>
@@ -684,13 +682,13 @@
 <td>显示文件结尾内容</td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <h2 id="命令格式-6"><a href="#命令格式-6" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tail [选项] 文件名</span><br><span class="line">选项：</span><br><span class="line">	-n 行数：	从文件结尾开始，显示指定行数</span><br><span class="line">	-f:			监听文件的新增内容</span><br></pre></td></tr></table></figure>
 
 <h2 id="常用用法-6"><a href="#常用用法-6" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
 <li>不加选项与-n选项与head类似</li>
-<li>监听文件新增内容<br><img src="https://img-blog.csdnimg.cn/20190118115428540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="**在这里插入图片描述**"><h1 id="ln命令"><a href="#ln命令" class="headerlink" title="ln命令"></a>ln命令</h1><table>
+<li>监听文件新增内容<br><img src="https://img-blog.csdnimg.cn/20190118115428540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="**在这里插入图片描述**"></li>
+</ul>
+<h1 id="ln命令"><a href="#ln命令" class="headerlink" title="ln命令"></a>ln命令</h1><table>
 <thead>
 <tr>
 <th>项目</th>
@@ -718,8 +716,6 @@
 <td>在文件之间建立链接</td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <h2 id="命令格式-7"><a href="#命令格式-7" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ln [选项] 源文件 目标文件</span><br><span class="line">选项：</span><br><span class="line">	-s:		建立软链接文件。如果不加-s则建立硬链接文件</span><br><span class="line">	-f:		强制。如果目标文件已经存在，则删除目标文件后再建立链接文件</span><br></pre></td></tr></table></figure>
 
 <p>若想理解此命令的用法，需先了解Linux文件系统是如何工作的。我们以现在主流的ext4为例，加以说明。</p>

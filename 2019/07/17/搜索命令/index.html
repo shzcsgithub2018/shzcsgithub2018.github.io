@@ -146,7 +146,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190124132357497.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190124132408624.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190124132650550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-07-17T13:17:48.002Z">
+<meta property="og:updated_time" content="2019-07-17T14:17:41.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搜索命令">
 <meta name="twitter:description" content="使用搜索命令的时候，如果搜索范围过大，则会给服务器造成巨大的压力，所以不要在服务器访问高峰期执行大范围搜索命令。 whereis 命令   项目 内容    命令名称 whereis   英文原意 locate the binary,source,and manual page files for a command   所在路径 /usr/bin/whereis   执行权限 所有用户   作用">
@@ -468,7 +468,9 @@
 <h2 id="常用用法"><a href="#常用用法" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
 <li>查看命令<br><img src="https://img-blog.csdnimg.cn/20190124105423608.png" alt="在这里插入图片描述"></li>
 <li>不能查看普通文件<br><img src="https://img-blog.csdnimg.cn/20190124105542808.png" alt="在这里插入图片描述"></li>
-<li>使用选项<br><img src="https://img-blog.csdnimg.cn/20190124105618284.png" alt="在这里插入图片描述"><h1 id="which-命令"><a href="#which-命令" class="headerlink" title="which 命令"></a>which 命令</h1><table>
+<li>使用选项<br><img src="https://img-blog.csdnimg.cn/20190124105618284.png" alt="在这里插入图片描述"></li>
+</ul>
+<h1 id="which-命令"><a href="#which-命令" class="headerlink" title="which 命令"></a>which 命令</h1><table>
 <thead>
 <tr>
 <th>项目</th>
@@ -496,11 +498,11 @@
 <td>列出命令的所在路径</td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <h2 id="与-whereis-的区别"><a href="#与-whereis-的区别" class="headerlink" title="与 whereis 的区别"></a>与 whereis 的区别</h2><ul>
 <li>which:  查找二进制命令(可执行文件)</li>
-<li>whereis: 查找二进制命令的同时,查找到帮助文档<br><img src="https://img-blog.csdnimg.cn/20190124112521493.png" alt="在这里插入图片描述"><h1 id="locate-命令"><a href="#locate-命令" class="headerlink" title="locate 命令"></a>locate 命令</h1><table>
+<li>whereis: 查找二进制命令的同时,查找到帮助文档<br><img src="https://img-blog.csdnimg.cn/20190124112521493.png" alt="在这里插入图片描述"></li>
+</ul>
+<h1 id="locate-命令"><a href="#locate-命令" class="headerlink" title="locate 命令"></a>locate 命令</h1><table>
 <thead>
 <tr>
 <th>项目</th>
@@ -528,14 +530,14 @@
 <td>按照文件名搜索文件</td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <h2 id="命令格式-1"><a href="#命令格式-1" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">locate [选项] 文件名</span><br><span class="line">选项：</span><br><span class="line">	-i:		忽略大小写</span><br></pre></td></tr></table></figure>
 
 <h2 id="常用用法-1"><a href="#常用用法-1" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
 <li>基本用法<br>可以搜索普通文件<br><img src="https://img-blog.csdnimg.cn/20190124112850853.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>也可以搜索系统文件<br><img src="https://img-blog.csdnimg.cn/20190124113034735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
 <li>locate 命令的数据库<br>使用中，可能会发现如下问题：<br><img src="https://img-blog.csdnimg.cn/20190124113146561.png" alt="在这里插入图片描述"><br>这是因为，locate 命令不会直接搜索硬盘，而会搜索 locate 数据库，优点是耗费资源小、搜索速度快；缺点是不能实时更新，需要等用户退出或者重启系统才更新，所以无法查找新建立的文件。<br>如果不想重启，可以使用如下命令：<br><img src="https://img-blog.csdnimg.cn/20190124113603942.png" alt="在这里插入图片描述"></li>
-<li>locate 配置文件<br><img src="https://img-blog.csdnimg.cn/20190124113735317.png" alt="在这里插入图片描述"><br>发现这样依然会找不到文件，为什么呢？来看看 locate 配置文件就明白了<br><img src="https://img-blog.csdnimg.cn/20190124114200203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这是 locate 时禁止搜索的拓展名、目录和文件系统。而 /tmp 在名单内，所有搜索不到。<h1 id="find-命令"><a href="#find-命令" class="headerlink" title="find 命令"></a>find 命令</h1><table>
+<li>locate 配置文件<br><img src="https://img-blog.csdnimg.cn/20190124113735317.png" alt="在这里插入图片描述"><br>发现这样依然会找不到文件，为什么呢？来看看 locate 配置文件就明白了<br><img src="https://img-blog.csdnimg.cn/20190124114200203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这是 locate 时禁止搜索的拓展名、目录和文件系统。而 /tmp 在名单内，所有搜索不到。</li>
+</ul>
+<h1 id="find-命令"><a href="#find-命令" class="headerlink" title="find 命令"></a>find 命令</h1><table>
 <thead>
 <tr>
 <th>项目</th>
@@ -563,8 +565,6 @@
 <td>在目录中搜索文件</td>
 </tr>
 </tbody></table>
-</li>
-</ul>
 <h2 id="命令格式-2"><a href="#命令格式-2" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">find 搜索路径 [选项] 搜索内容</span><br><span class="line">选项：	</span><br><span class="line">	-name:				按照文件名搜索</span><br><span class="line">	-iname：			按照文件名搜索，不区分文件名的大小写</span><br><span class="line">	-inum：				按照 inode 号搜索</span><br><span class="line">	-size [+-]大小：		按照指定大小搜索文件</span><br><span class="line">	-atime [+-]时间：	按照文件访问时间</span><br><span class="line">	-mtime [+-]时间：	按照文件修改时间</span><br><span class="line">	-ctime [+-]时间：	按照文件状态修改时间</span><br><span class="line">	-perm 权限模式：		查找文件的权限刚好等于 "权限模式" 的文件</span><br><span class="line">	-perm -权限模式：		查找文件的权限全部包含 "权限模式" 的文件</span><br><span class="line">	-perm +权限模式：		查找文件的权限至少包含一个 "权限模式" 的文件</span><br><span class="line">	-user 用户名:		按照所有者查找文件</span><br><span class="line">	-group 组名：		按照所属组查找文件</span><br><span class="line">	-nouser：			查找没有所有者的文件</span><br><span class="line">	-type d/f/l:		查找目录/普通文件/软连接文件</span><br><span class="line">	-a/-o/not:			逻辑 与、或、非</span><br></pre></td></tr></table></figure>
 
 <h2 id="常用用法-2"><a href="#常用用法-2" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
