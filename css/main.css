@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c1e432;
+  background: #bfffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2676,7 +2676,7 @@ pre .javascript .function {
   box-sizing: border-box;
   padding: 40px;
   width: 700px;
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   min-height: 700px;
   box-shadow: initial;
   border-radius: initial;
@@ -2995,7 +2995,7 @@ pre .javascript .function {
   }
 }
 body {
-  background-image: url("https://cn.bing.com/images/search?view=detailV2&ccid=Nt5xuCv2&id=A19E25F182438D4A69C74B84B78B41A106C1F1F9&thid=OIP.Nt5xuCv2XDkBWU-lpHJPiQHaEo&mediaurl=http%3a%2f%2fimg2.3lian.com%2f2014%2ff5%2f81%2fd%2f57.jpg&exph=800&expw=1280&q=%e5%8f%af%e7%88%b1%e7%9a%84%e6%a1%8c%e9%9d%a2%e8%83%8c%e6%99%af%e5%9b%be&simid=608005379082683343&selectedIndex=2&ajaxhist=0");
+  background-image: url("/images/background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
