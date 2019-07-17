@@ -316,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/链表-Easy/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/软件安装与卸载/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="宋海舟">
@@ -335,7 +335,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/07/17/链表-Easy/" itemprop="url">Leetcode-链表-Easy</a></h1>
+                <a class="post-title-link" href="/2019/07/17/软件安装与卸载/" itemprop="url">软件安装与卸载</a></h1>
         
 
         <div class="post-meta">
@@ -347,7 +347,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T18:25:28+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T21:06:36+08:00">
                 2019-07-17
               </time>
             
@@ -370,8 +370,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Code/" itemprop="url" rel="index">
-                    <span itemprop="name">Code</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -381,30 +381,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Code/Leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Code/Leetcode/链表/" itemprop="url" rel="index">
-                    <span itemprop="name">链表</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Code/Leetcode/链表/Easy/" itemprop="url" rel="index">
-                    <span itemprop="name">Easy</span>
+                  <a href="/categories/Linux/常用命令/" itemprop="url" rel="index">
+                    <span itemprop="name">常用命令</span>
                   </a>
                 </span>
 
@@ -441,13 +419,10 @@
 
       
         
-          <h2 id="21-合并两个有序链表"><a href="#21-合并两个有序链表" class="headerlink" title="21 合并两个有序链表"></a><font color="Orange">21 合并两个有序链表</font></h2><p>解法一：迭代法 尝试通过合并条件，减少变量使用等方式，不断重构代码。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">struct ListNode* <span class="title">mergeTwoLists</span><span class="params">(struct ListNode* l1, struct ListNode* l2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">newl</span>, *<span class="title">iter_newl</span>;</span></span><br><span class="line">    newl = (struct ListNode *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct ListNode));</span><br><span class="line">    iter_newl = newl;</span><br><span class="line">    <span class="keyword">while</span> (l1 &amp;&amp; l2)&#123;</span><br><span class="line">        <span class="keyword">if</span> (l1-&gt;val &lt;= l2-&gt;val)&#123;</span><br><span class="line">             iter_newl-&gt;next = l1;</span><br><span class="line">             l1 = l1-&gt;next;</span><br><span class="line">        &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">             iter_newl-&gt;next = l2;</span><br><span class="line">             l2 = l2-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        iter_newl = iter_newl-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    iter_newl-&gt;next = l1 == <span class="literal">NULL</span> ? l2 : l1;</span><br><span class="line">    <span class="keyword">return</span> newl-&gt;next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>解法二：递归 每次取最小头节点</p>
+          <h1 id="APT-方式"><a href="#APT-方式" class="headerlink" title="APT 方式"></a>APT 方式</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">普通安装：apt-get install softname1 softname2 …;</span><br><span class="line"></span><br><span class="line">修复安装：apt-get -f install softname1 softname2... ;(-f Atemp to correct broken dependencies)</span><br><span class="line"></span><br><span class="line">重新安装：apt-get --reinstall install softname1 softname2...</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/07/17/链表-Easy/#more" rel="contents">
+            <a class="btn" href="/2019/07/17/软件安装与卸载/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -498,7 +473,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/PAT乙级题解1006-1010/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/常用网络命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="宋海舟">
@@ -517,7 +492,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/07/15/PAT乙级题解1006-1010/" itemprop="url">PAT乙级题解1006-1010</a></h1>
+                <a class="post-title-link" href="/2019/07/17/常用网络命令/" itemprop="url">常用网络命令</a></h1>
         
 
         <div class="post-meta">
@@ -529,8 +504,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-15T23:30:55+08:00">
-                2019-07-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T21:06:17+08:00">
+                2019-07-17
               </time>
             
 
@@ -552,8 +527,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Code/" itemprop="url" rel="index">
-                    <span itemprop="name">Code</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -563,19 +538,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Code/PAT/" itemprop="url" rel="index">
-                    <span itemprop="name">PAT</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Code/PAT/Basic-Level/" itemprop="url" rel="index">
-                    <span itemprop="name">Basic Level</span>
+                  <a href="/categories/Linux/常用命令/" itemprop="url" rel="index">
+                    <span itemprop="name">常用命令</span>
                   </a>
                 </span>
 
@@ -612,19 +576,45 @@
 
       
         
-          <hr>
-<h1 id="1006-换个格式输出整数"><a href="#1006-换个格式输出整数" class="headerlink" title="1006 换个格式输出整数"></a><font size="5" color="Orange">1006 换个格式输出整数</font></h1><p>首先判断输入数字的位数，然后分情况输出即可。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">int</span> signB,  signS;</span><br><span class="line">    signB = signS = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (n &gt;= <span class="number">100</span>)</span><br><span class="line">        signB = signS = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (n &gt;= <span class="number">10</span>)</span><br><span class="line">        signS = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (signB) &#123;</span><br><span class="line">        <span class="keyword">int</span> count = n / <span class="number">100</span>;</span><br><span class="line">        <span class="keyword">while</span> (count--&gt;<span class="number">0</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"B"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (signS) &#123;</span><br><span class="line">        <span class="keyword">int</span> count = (n / <span class="number">10</span>) % <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">while</span> (count--&gt;<span class="number">0</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"S"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n % <span class="number">10</span>; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>, i);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="ifconfig-命令"><a href="#ifconfig-命令" class="headerlink" title="ifconfig 命令"></a>ifconfig 命令</h1><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令名称</td>
+<td>ifconfig</td>
+</tr>
+<tr>
+<td>英文原意</td>
+<td>configure a network interface</td>
+</tr>
+<tr>
+<td>所在路径</td>
+<td>/sbin/ifconfig</td>
+</tr>
+<tr>
+<td>执行权限</td>
+<td>超级用户</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>配置网络接口</td>
+</tr>
+<tr>
+<td>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/07/15/PAT乙级题解1006-1010/#more" rel="contents">
+            <a class="btn" href="/2019/07/17/常用网络命令/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
         
       
-    </div>
+    </td></tr></tbody></table></div>
     
     
     
@@ -668,7 +658,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/15/PAT乙级题解1001-1005/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/关机和重启命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="宋海舟">
@@ -687,7 +677,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/07/15/PAT乙级题解1001-1005/" itemprop="url">PAT乙级题解1001-1005</a></h1>
+                <a class="post-title-link" href="/2019/07/17/关机和重启命令/" itemprop="url">关机和重启命令</a></h1>
         
 
         <div class="post-meta">
@@ -699,8 +689,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-15T23:30:44+08:00">
-                2019-07-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T21:06:07+08:00">
+                2019-07-17
               </time>
             
 
@@ -722,8 +712,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Code/" itemprop="url" rel="index">
-                    <span itemprop="name">Code</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -733,19 +723,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Code/PAT/" itemprop="url" rel="index">
-                    <span itemprop="name">PAT</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Code/PAT/Basic-Level/" itemprop="url" rel="index">
-                    <span itemprop="name">Basic Level</span>
+                  <a href="/categories/Linux/常用命令/" itemprop="url" rel="index">
+                    <span itemprop="name">常用命令</span>
                   </a>
                 </span>
 
@@ -782,18 +761,1294 @@
 
       
         
-          <h1 id="1001-害死人不偿命的-3n-1-猜想"><a href="#1001-害死人不偿命的-3n-1-猜想" class="headerlink" title="1001 害死人不偿命的(3n+1)猜想"></a><font size="5" color="Orange">1001 害死人不偿命的(3n+1)猜想</font></h1><p>将奇数情况转换为偶数，最后只对偶数做除二处理。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, count = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    <span class="keyword">while</span> (n !=<span class="number">1</span> )&#123;</span><br><span class="line">        count++;</span><br><span class="line">        <span class="keyword">if</span> (n &amp; <span class="number">1</span>) </span><br><span class="line">            n = <span class="number">3</span> * n + <span class="number">1</span>;</span><br><span class="line">        n /= <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,count);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="sync-命令"><a href="#sync-命令" class="headerlink" title="sync 命令"></a>sync 命令</h1><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令名称</td>
+<td>sync</td>
+</tr>
+<tr>
+<td>英文原意</td>
+<td>flush file system buffers</td>
+</tr>
+<tr>
+<td>所在路径</td>
+<td>/usr/sync</td>
+</tr>
+<tr>
+<td>执行权限</td>
+<td>所有用户</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>刷新文件系统缓冲区</td>
+</tr>
+<tr>
+<td>该命令的作用是把内存中的数据强制写入硬盘，这个命令在常规关机的命令中会自动执行，如果不放心，则手动之行几次，避免数据丢失。</td>
+<td></td>
+</tr>
+<tr>
+<td>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/07/15/PAT乙级题解1001-1005/#more" rel="contents">
+            <a class="btn" href="/2019/07/17/关机和重启命令/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
         
       
-    </div>
+    </td></tr></tbody></table></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/压缩解压命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋海舟">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/25.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋海舟 の blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/17/压缩解压命令/" itemprop="url">压缩解压命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T21:05:21+08:00">
+                2019-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/常用命令/" itemprop="url" rel="index">
+                    <span itemprop="name">常用命令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>在系统中，如果有大量的文件需要复制和保存，那么把他们打成压缩包是不错的选择。打包压缩作为常规操作，在 Windows 和 Linux 中都比较常见。Windows 中常见的压缩包格式主要有 “.zip” “.rar”  “.7z” 等；Linux 中常见的压缩格式有十几种，比如 “.zip” “.gz” “.bz2” “.tar” “.tar.gz” “.tar.bz2” 等。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/17/压缩解压命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </p></blockquote></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/搜索命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋海舟">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/25.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋海舟 の blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/17/搜索命令/" itemprop="url">搜索命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T21:04:54+08:00">
+                2019-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/常用命令/" itemprop="url" rel="index">
+                    <span itemprop="name">常用命令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>使用搜索命令的时候，如果搜索范围过大，则会给服务器造成巨大的压力，所以不要在服务器访问高峰期执行大范围搜索命令。</p>
+<h1 id="whereis-命令"><a href="#whereis-命令" class="headerlink" title="whereis 命令"></a>whereis 命令</h1><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令名称</td>
+<td>whereis</td>
+</tr>
+<tr>
+<td>英文原意</td>
+<td>locate the binary,source,and manual page files for a command</td>
+</tr>
+<tr>
+<td>所在路径</td>
+<td>/usr/bin/whereis</td>
+</tr>
+<tr>
+<td>执行权限</td>
+<td>所有用户</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>查找二进制命令、源文件和帮助文档的命令</td>
+</tr>
+<tr>
+<td>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/17/搜索命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </td></tr></tbody></table></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/帮助命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋海舟">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/25.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋海舟 の blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/17/帮助命令/" itemprop="url">帮助命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T21:03:53+08:00">
+                2019-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/常用命令/" itemprop="url" rel="index">
+                    <span itemprop="name">常用命令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Linux 自带的帮助文档是最准确、最权威可靠的资料。</p>
+<h1 id="man-命令"><a href="#man-命令" class="headerlink" title="man 命令"></a>man 命令</h1><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令名称</td>
+<td>man</td>
+</tr>
+<tr>
+<td>英文原意</td>
+<td>format and display the on-line manual pages</td>
+</tr>
+<tr>
+<td>所在路径</td>
+<td>/usr/bin/man</td>
+</tr>
+<tr>
+<td>执行权限</td>
+<td>所有用户</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>显示联机帮助手册</td>
+</tr>
+<tr>
+<td>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/17/帮助命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </td></tr></tbody></table></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/权限管理命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋海舟">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/25.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋海舟 の blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/17/权限管理命令/" itemprop="url">权限管理命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T21:03:21+08:00">
+                2019-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/常用命令/" itemprop="url" rel="index">
+                    <span itemprop="name">常用命令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="权限介绍"><a href="#权限介绍" class="headerlink" title="权限介绍"></a>权限介绍</h1><ol>
+<li>为什么需要权限<br>平时所使用的计算机都是个人计算机，都是自己或者自己信任的人在使用，所以感受不到权限的作用，都是使用管理员权限。<br>可是，对于服务器来说，使用者非常多，服务器里保存的数据有些非常重要，有些价值非常高，因此对权限当然是设定的越详细越好，用户的分级越明确越好。比如在银行里，行长和柜台服务人员对于存储数据的服务器的权限肯定不同。在服务器上，绝对不是所有的用户都是用 root 身份登录，而要根据不同的工作需要和职位需要，合理分配用户等级和权限等级。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/17/权限管理命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </li></ol></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/目录文件都可操作命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋海舟">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/25.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋海舟 の blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/17/目录文件都可操作命令/" itemprop="url">目录文件都可操作命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T21:02:37+08:00">
+                2019-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/常用命令/" itemprop="url" rel="index">
+                    <span itemprop="name">常用命令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>计算机对数据的基本操作大多数可以归纳为增删改查，文件操作也不例外。</p>
+<h1 id="touch-命令"><a href="#touch-命令" class="headerlink" title="touch 命令"></a>touch 命令</h1><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令名称</td>
+<td>touch</td>
+</tr>
+<tr>
+<td>英文原意</td>
+<td>change file timestamps</td>
+</tr>
+<tr>
+<td>所在路径</td>
+<td>/bin/touch</td>
+</tr>
+<tr>
+<td>执行权限</td>
+<td>所有用户</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>修改文件的时间戳</td>
+</tr>
+<tr>
+<td>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/17/目录文件都可操作命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </td></tr></tbody></table></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/文件操作命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋海舟">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/25.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋海舟 の blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/17/文件操作命令/" itemprop="url">文件操作命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T21:01:23+08:00">
+                2019-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/常用命令/" itemprop="url" rel="index">
+                    <span itemprop="name">常用命令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>计算机对数据的基本操作大多数可以归纳为增删改查，文件操作也不例外。</p>
+<h1 id="touch-命令"><a href="#touch-命令" class="headerlink" title="touch 命令"></a>touch 命令</h1><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令名称</td>
+<td>touch</td>
+</tr>
+<tr>
+<td>英文原意</td>
+<td>change file timestamps</td>
+</tr>
+<tr>
+<td>所在路径</td>
+<td>/bin/touch</td>
+</tr>
+<tr>
+<td>执行权限</td>
+<td>所有用户</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>修改文件的时间戳</td>
+</tr>
+<tr>
+<td>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/17/文件操作命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </td></tr></tbody></table></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/目录操作命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋海舟">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/25.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋海舟 の blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/17/目录操作命令/" itemprop="url">目录操作命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T21:00:16+08:00">
+                2019-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/常用命令/" itemprop="url" rel="index">
+                    <span itemprop="name">常用命令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="目录操作命令"><a href="#目录操作命令" class="headerlink" title="目录操作命令"></a>目录操作命令</h1><h2 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h2><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令名称</td>
+<td>ls</td>
+</tr>
+<tr>
+<td>英文原意</td>
+<td>list</td>
+</tr>
+<tr>
+<td>所在路径</td>
+<td>\bin\ls</td>
+</tr>
+<tr>
+<td>执行权限</td>
+<td>所有用户</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>显示目录下的内容</td>
+</tr>
+<tr>
+<td>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/17/目录操作命令/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </td></tr></tbody></table></div>
     
     
     
@@ -827,6 +2082,10 @@
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -872,7 +2131,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -883,7 +2142,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -894,7 +2153,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

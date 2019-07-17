@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Linux命令,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="使用搜索命令的时候，如果搜索范围过大，则会给服务器造成巨大的压力，所以不要在服务器访问高峰期执行大范围搜索命令。 whereis 命令   项目 内容    命令名称 whereis   英文原意 locate the binary,source,and manual page files for a command   所在路径 /usr/bin/whereis   执行权限 所有用户   作用">
+<meta name="keywords" content="Linux命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搜索命令">
+<meta property="og:url" content="http://yoursite.com/2019/07/17/搜索命令/index.html">
+<meta property="og:site_name" content="宋海舟 の blog">
+<meta property="og:description" content="使用搜索命令的时候，如果搜索范围过大，则会给服务器造成巨大的压力，所以不要在服务器访问高峰期执行大范围搜索命令。 whereis 命令   项目 内容    命令名称 whereis   英文原意 locate the binary,source,and manual page files for a command   所在路径 /usr/bin/whereis   执行权限 所有用户   作用">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124105423608.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124105542808.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124105618284.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124112521493.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124112850853.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124113034735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124113146561.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124113603942.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124113735317.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124114200203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124130820676.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124132345732.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124132357497.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124132408624.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190124132650550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-07-17T13:14:12.189Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搜索命令">
+<meta name="twitter:description" content="使用搜索命令的时候，如果搜索范围过大，则会给服务器造成巨大的压力，所以不要在服务器访问高峰期执行大范围搜索命令。 whereis 命令   项目 内容    命令名称 whereis   英文原意 locate the binary,source,and manual page files for a command   所在路径 /usr/bin/whereis   执行权限 所有用户   作用">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190124105423608.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/17/搜索命令/">
+
+
+
+
+
+  <title>搜索命令 | 宋海舟 の blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?147b73be81d8bf6f49c5aa20e81be040";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">宋海舟 の blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/17/搜索命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋海舟">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/25.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋海舟 の blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">搜索命令</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-17T21:04:54+08:00">
+                2019-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/常用命令/" itemprop="url" rel="index">
+                    <span itemprop="name">常用命令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>使用搜索命令的时候，如果搜索范围过大，则会给服务器造成巨大的压力，所以不要在服务器访问高峰期执行大范围搜索命令。</p>
+<h1 id="whereis-命令"><a href="#whereis-命令" class="headerlink" title="whereis 命令"></a>whereis 命令</h1><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令名称</td>
+<td>whereis</td>
+</tr>
+<tr>
+<td>英文原意</td>
+<td>locate the binary,source,and manual page files for a command</td>
+</tr>
+<tr>
+<td>所在路径</td>
+<td>/usr/bin/whereis</td>
+</tr>
+<tr>
+<td>执行权限</td>
+<td>所有用户</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>查找二进制命令、源文件和帮助文档的命令</td>
+</tr>
+<tr>
+<td><a id="more"></a></td>
+<td></td>
+</tr>
+<tr>
+<td>## 命令格式</td>
+<td></td>
+</tr>
+<tr>
+<td><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">whereis [选项] 命令</span><br><span class="line">选项：</span><br><span class="line">	-b:		只查找二进制命令</span><br><span class="line">	-m:		只查找帮助文档</span><br></pre></td></tr></table></figure></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="常用用法"><a href="#常用用法" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
+<li>查看命令<br><img src="https://img-blog.csdnimg.cn/20190124105423608.png" alt="在这里插入图片描述"></li>
+<li>不能查看普通文件<br><img src="https://img-blog.csdnimg.cn/20190124105542808.png" alt="在这里插入图片描述"></li>
+<li>使用选项<br><img src="https://img-blog.csdnimg.cn/20190124105618284.png" alt="在这里插入图片描述"><h1 id="which-命令"><a href="#which-命令" class="headerlink" title="which 命令"></a>which 命令</h1><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令名称</td>
+<td>which</td>
+</tr>
+<tr>
+<td>英文原意</td>
+<td>shows the full path of (shell) commands</td>
+</tr>
+<tr>
+<td>所在路径</td>
+<td>/usr/bin/which</td>
+</tr>
+<tr>
+<td>执行权限</td>
+<td>所有用户</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>列出命令的所在路径</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="与-whereis-的区别"><a href="#与-whereis-的区别" class="headerlink" title="与 whereis 的区别"></a>与 whereis 的区别</h2><ul>
+<li>which:  查找二进制命令(可执行文件)</li>
+<li>whereis: 查找二进制命令的同时,查找到帮助文档<br><img src="https://img-blog.csdnimg.cn/20190124112521493.png" alt="在这里插入图片描述"><h1 id="locate-命令"><a href="#locate-命令" class="headerlink" title="locate 命令"></a>locate 命令</h1><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令名称</td>
+<td>locate</td>
+</tr>
+<tr>
+<td>英文原意</td>
+<td>fubd fukes by name</td>
+</tr>
+<tr>
+<td>所在路径</td>
+<td>/usr/bin/locate</td>
+</tr>
+<tr>
+<td>执行权限</td>
+<td>所有用户</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>按照文件名搜索文件</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">locate [选项] 文件名</span><br><span class="line">选项：</span><br><span class="line">	-i:		忽略大小写</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用用法-1"><a href="#常用用法-1" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
+<li>基本用法<br>可以搜索普通文件<br><img src="https://img-blog.csdnimg.cn/20190124112850853.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>也可以搜索系统文件<br><img src="https://img-blog.csdnimg.cn/20190124113034735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>locate 命令的数据库<br>使用中，可能会发现如下问题：<br><img src="https://img-blog.csdnimg.cn/20190124113146561.png" alt="在这里插入图片描述"><br>这是因为，locate 命令不会直接搜索硬盘，而会搜索 locate 数据库，优点是耗费资源小、搜索速度快；缺点是不能实时更新，需要等用户退出或者重启系统才更新，所以无法查找新建立的文件。<br>如果不想重启，可以使用如下命令：<br><img src="https://img-blog.csdnimg.cn/20190124113603942.png" alt="在这里插入图片描述"></li>
+<li>locate 配置文件<br><img src="https://img-blog.csdnimg.cn/20190124113735317.png" alt="在这里插入图片描述"><br>发现这样依然会找不到文件，为什么呢？来看看 locate 配置文件就明白了<br><img src="https://img-blog.csdnimg.cn/20190124114200203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这是 locate 时禁止搜索的拓展名、目录和文件系统。而 /tmp 在名单内，所有搜索不到。<h1 id="find-命令"><a href="#find-命令" class="headerlink" title="find 命令"></a>find 命令</h1><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命令名称</td>
+<td>find</td>
+</tr>
+<tr>
+<td>英文原意</td>
+<td>search for files in a directory hierarchy</td>
+</tr>
+<tr>
+<td>所在路径</td>
+<td>/bin/find</td>
+</tr>
+<tr>
+<td>执行权限</td>
+<td>所有用户</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>在目录中搜索文件</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="命令格式-1"><a href="#命令格式-1" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">find 搜索路径 [选项] 搜索内容</span><br><span class="line">选项：	</span><br><span class="line">	-name:				按照文件名搜索</span><br><span class="line">	-iname：			按照文件名搜索，不区分文件名的大小写</span><br><span class="line">	-inum：				按照 inode 号搜索</span><br><span class="line">	-size [+-]大小：		按照指定大小搜索文件</span><br><span class="line">	-atime [+-]时间：	按照文件访问时间</span><br><span class="line">	-mtime [+-]时间：	按照文件修改时间</span><br><span class="line">	-ctime [+-]时间：	按照文件状态修改时间</span><br><span class="line">	-perm 权限模式：		查找文件的权限刚好等于 "权限模式" 的文件</span><br><span class="line">	-perm -权限模式：		查找文件的权限全部包含 "权限模式" 的文件</span><br><span class="line">	-perm +权限模式：		查找文件的权限至少包含一个 "权限模式" 的文件</span><br><span class="line">	-user 用户名:		按照所有者查找文件</span><br><span class="line">	-group 组名：		按照所属组查找文件</span><br><span class="line">	-nouser：			查找没有所有者的文件</span><br><span class="line">	-type d/f/l:		查找目录/普通文件/软连接文件</span><br><span class="line">	-a/-o/not:			逻辑 与、或、非</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用用法-2"><a href="#常用用法-2" class="headerlink" title="常用用法"></a>常用用法</h2><ul>
+<li>按照文件名搜索<br><img src="https://img-blog.csdnimg.cn/20190124130820676.png" alt="在这里插入图片描述"><br>注意，find 命令是完全匹配的，即搜 hello.c，就不会搜 hello.c.a。<br>还可以使用不区分大小写的 -iname 命令，用法相同；<br>还有 inum，这个可以用来区分硬链接文件。</li>
+<li>按照文件大小搜索<ol>
+<li>搜索指定大小文件<br><img src="https://img-blog.csdnimg.cn/20190124132345732.png" alt="在这里插入图片描述"></li>
+<li>搜索比指定大小大的文件<br><img src="https://img-blog.csdnimg.cn/20190124132357497.png" alt="在这里插入图片描述"></li>
+<li>搜索比指定大小小的文件<br><img src="https://img-blog.csdnimg.cn/20190124132408624.png" alt="在这里插入图片描述"><br>关于大小的单位：<br><img src="https://img-blog.csdnimg.cn/20190124132650550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc1ODgyMw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+</ol>
+</li>
+<li>按照修改时间搜索<br>主要解释 [+-] 含义。比如用 mtime ：<br>-5 ：代表 5 天内修改的文件<br>5  ：  代表前 5~6 天修改的文件<br>+5：代表6天前修改的文件<br><strong>注意</strong> mtime ，ctime， atime 的单位是天，还可以用 mmin，cmin，amin 单位是分钟。</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux命令/" rel="tag"># Linux命令</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/17/帮助命令/" rel="next" title="帮助命令">
+                <i class="fa fa-chevron-left"></i> 帮助命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/17/压缩解压命令/" rel="prev" title="压缩解压命令">
+                压缩解压命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/25.jpg" alt="宋海舟">
+            
+              <p class="site-author-name" itemprop="name">宋海舟</p>
+              <p class="site-description motion-element" itemprop="description">只有用心才能看得清。实质性的东西，用眼睛是看不见的。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/shzcsgithub2018" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:shz.csgg2017@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#whereis-命令"><span class="nav-number">1.</span> <span class="nav-text">whereis 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法"><span class="nav-number">1.1.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#which-命令"><span class="nav-number">2.</span> <span class="nav-text">which 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#与-whereis-的区别"><span class="nav-number">2.1.</span> <span class="nav-text">与 whereis 的区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#locate-命令"><span class="nav-number">3.</span> <span class="nav-text">locate 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式"><span class="nav-number">3.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法-1"><span class="nav-number">3.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#find-命令"><span class="nav-number">4.</span> <span class="nav-text">find 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令格式-1"><span class="nav-number">4.1.</span> <span class="nav-text">命令格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用用法-2"><span class="nav-number">4.2.</span> <span class="nav-text">常用用法</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">宋海舟</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
